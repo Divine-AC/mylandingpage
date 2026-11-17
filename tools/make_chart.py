@@ -54,7 +54,7 @@ for v in ticks:
         f'<text x="{W - PR}" y="{y - 6:.2f}" text-anchor="end" class="ax">{v:,.0f}</text>'
     )
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Equity curve of 99 closed trades, September to November 2026">
+svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Equity curve of 99 closed trades on a demo trading account, September to November 2026">
 <defs>
   <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
     <stop offset="0%" stop-color="#d8b25f" stop-opacity="0.28"/>
@@ -76,7 +76,7 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{
 <path d="{line}" fill="none" stroke="url(#stroke)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="{pts[-1][0]:.2f}" cy="{pts[-1][1]:.2f}" r="4" fill="#e6c574"/>
 <text x="{PL}" y="{H - 10}" class="lbl">SEP 2026</text>
-<text x="{W / 2:.0f}" y="{H - 10}" text-anchor="middle" class="lbl">CLOSED TRADES · 99</text>
+<text x="{W / 2:.0f}" y="{H - 10}" text-anchor="middle" class="lbl">DEMO ACCOUNT · CLOSED TRADES · 99</text>
 <text x="{W - PR}" y="{H - 10}" text-anchor="end" class="lbl">NOV 2026</text>
 </svg>
 '''

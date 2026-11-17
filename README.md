@@ -22,9 +22,18 @@ Built as plain HTML + CSS + JS: **no framework, no build step, no dependencies.*
 
 ### Sections (in order)
 
-Hero → Markets (6 instruments) → Method (4 steps) → Track record (equity curve) →
-Telegram → **Selected work (3 live projects)** → About → LinkedIn band → Contact.
+Hero (trader · engineer · builder) → **About: three disciplines + full CV timeline** →
+Markets & Method → **Track record (demo account)** → Telegram → **Selected work (4 live apps +
+4 more repos)** → Build with me → LinkedIn band → Contact.
 On mobile there is a hamburger menu and a sticky "Daily trades / Hire me" bar at the bottom.
+
+### ⚠️ The track record is a DEMO account
+
+The equity curve is from a **demo account**, not live capital — the page says so in the heading,
+the sub-headline, the chart caption, three explanatory notes and the footer. **Do not remove
+those labels.** The page also states that the win rate across the full trading record is
+**48–55%**, and that this 99-trade window (34.3%, ~flat) came in below that during a difficult
+emotional stretch. That framing is deliberate: honest, and defensible if anyone challenges it.
 
 ### The Selected work section
 
@@ -32,7 +41,9 @@ Each project card shows a live iframe of the deployed site inside a browser fram
 fallback panel behind it. If a host ever blocks embedding (`X-Frame-Options` / CSP), the fallback
 remains visible and the "Visit live site" link still works — so the section can never look broken.
 Projects: `propfirmintelligenence.vercel.app`, `divine-banking-web-app.vercel.app`,
-`group-6-capstone-project-two.vercel.app`.
+`group-6-capstone-project-two.vercel.app`, plus a "you are here" card for this site.
+Below them, a smaller grid links BlockLedger, the Jumia-style backend, `reset-css` and the
+full GitHub profile.
 | `data/trades-raw.txt` | The broker ledger export, one line per trade |
 | `data/trades.json` | Parsed + verified trades (generated) |
 | `data/stats.json` | Computed statistics (generated) |
@@ -60,7 +71,7 @@ WhatsApp has been removed from the page entirely. Change any of the three links 
 nav, hero, Telegram band, LinkedIn band, contact cards, sticky mobile bar and footer all update
 at once — the markup never needs editing.
 
-**Only remaining task:** if you attach a real domain, replace `divineabba.vercel.app` with it in
+**Only remaining task:** if you attach a real domain, replace `mylandingpage-taupe.vercel.app` with it in
 **`index.html`** (canonical, OG, JSON-LD), **`robots.txt`** and **`sitemap.xml`**. On the free
 `*.vercel.app` URL nothing needs changing.
 
