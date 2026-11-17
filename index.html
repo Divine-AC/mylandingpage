@@ -6,7 +6,7 @@
 <title>Divine Abba — Trader &amp; Market Analyst | Gold, FX, Oil &amp; Crypto</title>
 <meta name="description" content="Divine Abba is a Lagos-based trader and market analyst covering gold, silver, FX majors, oil and crypto. Daily trade posts on Telegram, plus web development for traders and small businesses."/>
 <meta name="author" content="Divine Abba"/>
-<link rel="canonical" href="https://divineabba.com/"/>
+<link rel="canonical" href="https://divineabba.vercel.app/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:title" content="Divine Abba — Trader &amp; Market Analyst"/>
 <meta property="og:description" content="Gold, FX, oil and crypto. Daily trade posts on Telegram. Web development for traders and small businesses."/>
@@ -25,10 +25,14 @@
   "jobTitle": "Trader & Market Analyst",
   "description": "Discretionary trader and market analyst covering precious metals, FX majors, energy and crypto.",
   "image": "assets/divine-hero.jpg",
-  "url": "https://divineabba.com/",
+  "url": "https://divineabba.vercel.app/",
+  "email": "mailto:divineabbachimdirim1@gmail.com",
   "address": { "@type": "PostalAddress", "addressLocality": "Lagos", "addressCountry": "NG" },
   "knowsAbout": ["Gold trading", "Silver trading", "Foreign exchange", "Crude oil", "Bitcoin", "Risk management", "Technical analysis", "Web development"],
-  "sameAs": ["https://linkedin.com/in/divine-abba-883540311"]
+  "sameAs": [
+    "https://linkedin.com/in/divine-abba-883540311",
+    "https://t.me/adcrim"
+  ]
 }
 </script>
 </head>
@@ -41,15 +45,25 @@
       <span class="mark" aria-hidden="true">DA</span>
       <span class="brand-t">Divine&nbsp;Abba<em>Trader &amp; Market Analyst</em></span>
     </a>
-    <nav aria-label="Sections">
-      <a href="#about">About</a>
+
+    <nav id="navmenu" aria-label="Sections">
       <a href="#markets">Markets</a>
       <a href="#method">Method</a>
       <a href="#track">Track record</a>
-      <a href="#web">Web dev</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-gold btn-sm" href="#telegram">Join Telegram</a>
+
+    <div class="nav-actions">
+      <a class="btn btn-gold btn-sm nav-tg" href="#telegram" data-tg-label>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="currentColor"><path d="M21.9 3.4 1.9 11.2c-1 .4-1 1.8.1 2.1l4.9 1.6 1.9 5.9c.3.9 1.4 1.1 2 .4l2.7-2.6 5 3.7c.8.6 1.9.1 2.1-.9l3.1-15.6c.2-1-.8-1.8-1.8-1.4Zm-3.3 4.2-7.8 6.9-.3 3.4-1.3-4 9.4-6.3Z"/></svg>
+        Telegram
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -68,12 +82,16 @@
         tools I use to trade.
       </p>
       <div class="cta-row">
-        <a class="btn btn-gold" href="#web">Book a web development build</a>
-        <a class="btn btn-ghost" href="#telegram">
+        <a class="btn btn-gold" href="#telegram">
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M21.9 3.4 1.9 11.2c-1 .4-1 1.8.1 2.1l4.9 1.6 1.9 5.9c.3.9 1.4 1.1 2 .4l2.7-2.6 5 3.7c.8.6 1.9.1 2.1-.9l3.1-15.6c.2-1-.8-1.8-1.8-1.4Zm-3.3 4.2-7.8 6.9-.3 3.4-1.3-4 9.4-6.3Z"/></svg>
           Join Telegram for daily trades
         </a>
+        <a class="btn btn-ghost" href="#work">See my web builds</a>
       </div>
+      <a class="linkedin-inline" href="https://linkedin.com/in/divine-abba-883540311" target="_blank" rel="noopener noreferrer" data-linkedin>
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.4 9.75h5.16V21H2.4V9.75Zm7.9 0h4.95v1.54h.07c.69-1.24 2.37-2.05 4.06-2.05 4.34 0 5.14 2.7 5.14 6.2V21h-5.16v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21H10.3V9.75Z"/></svg>
+        or follow me on LinkedIn — I post charts there too
+      </a>
       <ul class="hero-facts">
         <li><strong>6</strong><span>markets covered</span></li>
         <li><strong>Daily</strong><span>trade posts</span></li>
@@ -87,42 +105,6 @@
       </div>
       <div class="ticker" aria-hidden="true">
         <div class="ticker-track" id="tickerTrack"></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section class="sec" id="about">
-  <div class="wrap split">
-    <div>
-      <p class="kicker">About</p>
-      <h2>Analysis first. Risk always.</h2>
-    </div>
-    <div class="prose">
-      <p>
-        I started trading in 2021 out of a simple obsession: understanding why price moves.
-        That turned into a full-time practice across precious metals, FX majors, crude and crypto —
-        the same six instruments I still trade today, because depth in a few markets beats a
-        shallow opinion on fifty.
-      </p>
-      <p>
-        My work is discretionary and process-driven. I trade a small number of high-conviction
-        setups around session liquidity, key levels and macro catalysts, and I size every position
-        from the stop — never the other way round. When a trade is wrong, the loss is small and
-        already planned. When the read is right, I let the position work.
-      </p>
-      <p>
-        I publish my analysis openly. Not because every call is right — plenty aren't — but because
-        a track record you can't inspect isn't a track record. You can see how I think, what I got
-        wrong, and how I managed it.
-      </p>
-      <div class="chip-row">
-        <span class="chip">Technical analysis</span>
-        <span class="chip">Macro catalysts</span>
-        <span class="chip">Session liquidity</span>
-        <span class="chip">Risk-first sizing</span>
-        <span class="chip">Trade journaling</span>
       </div>
     </div>
   </div>
@@ -247,7 +229,7 @@
           Charts, levels, bias and management — posted as I take them. No signal-selling, no
           paid group, no hype. Join and watch me work before you decide anything.
         </p>
-        <a class="btn btn-gold" href="https://t.me/" target="_blank" rel="noopener noreferrer" data-tg>
+        <a class="btn btn-gold" href="https://t.me/adcrim" target="_blank" rel="noopener noreferrer" data-tg>
           <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M21.9 3.4 1.9 11.2c-1 .4-1 1.8.1 2.1l4.9 1.6 1.9 5.9c.3.9 1.4 1.1 2 .4l2.7-2.6 5 3.7c.8.6 1.9.1 2.1-.9l3.1-15.6c.2-1-.8-1.8-1.8-1.4Zm-3.3 4.2-7.8 6.9-.3 3.4-1.3-4 9.4-6.3Z"/></svg>
           Join the Telegram channel
         </a>
@@ -262,37 +244,182 @@
   </div>
 </section>
 
-<!-- ============ WEB DEV ============ -->
-<section class="sec alt" id="web">
-  <div class="wrap split">
-    <div>
-      <p class="kicker">Web development</p>
-      <h2>I also build the sites and tools.</h2>
-      <p class="prose-sm">
-        Traders live in spreadsheets, dashboards and broken broker portals. I build clean,
-        fast, mobile-first websites and small tools for traders, coaches and small businesses —
-        the kind of thing that takes one or two weeks, not three months.
-      </p>
+<!-- ============ WORK / PROJECTS ============ -->
+<section class="sec alt" id="work">
+  <div class="wrap">
+    <p class="kicker">Selected work</p>
+    <h2>Sites and tools I've actually shipped.</h2>
+    <p class="sub">
+      Live products, not mockups. Every card below is a running deployment — open it and use it.
+    </p>
+
+    <div class="work-list">
+
+      <article class="project">
+        <div class="project-copy">
+          <p class="project-tag">Product · Next.js</p>
+          <h3>PropFirm Intelligence</h3>
+          <p>
+            A prop-firm comparison tool that checks account rules against a trader's own
+            preferences, plus a private CSV analyser that turns a broker export into realised
+            performance metrics — with every unknowable clearly labelled.
+          </p>
+          <ul class="project-meta">
+            <li>Next.js · TypeScript</li>
+            <li>Rule-matching engine</li>
+            <li>CSV trade analytics</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm" href="https://propfirmintelligenence.vercel.app" target="_blank" rel="noopener noreferrer">
+            Visit live site <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url">propfirmintelligenence.vercel.app</span>
+          </div>
+          <div class="shot">
+            <iframe src="https://propfirmintelligenence.vercel.app" title="Live preview of PropFirm Intelligence"
+                    loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+            <div class="shot-fallback">
+              <strong>PropFirm Intelligence</strong>
+              <span>Next.js · live app</span>
+              <span class="visit">Visit site ↗</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-copy">
+          <p class="project-tag">Full-stack · Auth</p>
+          <h3>Divine Bank</h3>
+          <p>
+            A secure web banking portal: registration and sign-in, authenticated sessions,
+            account dashboard and encrypted transport end to end — built as a complete
+            front-end plus API, not a static shell.
+          </p>
+          <ul class="project-meta">
+            <li>Vite front end</li>
+            <li>Node API + session auth</li>
+            <li>Live app · opens on sign-in</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm" href="https://divine-banking-web-app.vercel.app" target="_blank" rel="noopener noreferrer">
+            Visit live site <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url">divine-banking-web-app.vercel.app</span>
+          </div>
+          <div class="shot">
+            <iframe src="https://divine-banking-web-app.vercel.app" title="Live preview of Divine Bank"
+                    loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+            <div class="shot-fallback">
+              <strong>Divine Bank</strong>
+              <span>Sign-in screen · full-stack</span>
+              <span class="visit">Visit site ↗</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-copy">
+          <p class="project-tag">Team build · Capstone</p>
+          <h3>JRP — Job Ready Platform</h3>
+          <p>
+            A job-search platform for the Nigerian market: employer and candidate flows,
+            searchable listings with salary bands, saved applications and profile building.
+            Delivered as a group capstone project.
+          </p>
+          <ul class="project-meta">
+            <li>Vite · responsive UI</li>
+            <li>Job search + filters</li>
+            <li>Group capstone (team of 6)</li>
+          </ul>
+          <a class="btn btn-ghost btn-sm" href="https://group-6-capstone-project-two.vercel.app" target="_blank" rel="noopener noreferrer">
+            Visit live site <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div class="browser">
+          <div class="browser-bar" aria-hidden="true">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="url">group-6-capstone-project-two.vercel.app</span>
+          </div>
+          <div class="shot">
+            <iframe src="https://group-6-capstone-project-two.vercel.app" title="Live preview of JRP Job Ready Platform"
+                    loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+            <div class="shot-fallback">
+              <strong>JRP Job Platform</strong>
+              <span>Vite · live app</span>
+              <span class="visit">Visit site ↗</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="work-foot">
+      <p>Need something like this? I build landing pages, dashboards and small full-stack apps.</p>
       <a class="btn btn-gold" href="#contact">Book a build</a>
     </div>
-    <div class="grid2">
-      <article class="mini">
-        <h3>Landing pages</h3>
-        <p>One-page sites that load fast, rank, and convert — like this one. Copy, design and build included.</p>
-      </article>
-      <article class="mini">
-        <h3>Trading dashboards</h3>
-        <p>Custom trade journals, P&amp;L and risk trackers, equity-curve views driven by your own export files.</p>
-      </article>
-      <article class="mini">
-        <h3>Portfolios &amp; blogs</h3>
-        <p>Personal brands, analyst sites and content hubs with a clean CMS you can actually update.</p>
-      </article>
-      <article class="mini">
-        <h3>Fixes &amp; speed work</h3>
-        <p>Slow site, broken mobile layout, dead forms. I audit, fix and hand it back documented.</p>
-      </article>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="sec" id="about">
+  <div class="wrap split">
+    <div>
+      <p class="kicker">About</p>
+      <h2>Analysis first. Risk always.</h2>
     </div>
+    <div class="prose">
+      <p>
+        I started trading in 2021 out of a simple obsession: understanding why price moves.
+        That turned into a full-time practice across precious metals, FX majors, crude and crypto —
+        the same six instruments I still trade today, because depth in a few markets beats a
+        shallow opinion on fifty.
+      </p>
+      <p>
+        My work is discretionary and process-driven. I trade a small number of high-conviction
+        setups around session liquidity, key levels and macro catalysts, and I size every position
+        from the stop — never the other way round. When a trade is wrong, the loss is small and
+        already planned. When the read is right, I let the position work.
+      </p>
+      <p>
+        I publish my analysis openly. Not because every call is right — plenty aren't — but because
+        a track record you can't inspect isn't a track record. You can see how I think, what I got
+        wrong, and how I managed it.
+      </p>
+      <div class="chip-row">
+        <span class="chip">Technical analysis</span>
+        <span class="chip">Macro catalysts</span>
+        <span class="chip">Session liquidity</span>
+        <span class="chip">Risk-first sizing</span>
+        <span class="chip">Trade journaling</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LINKEDIN ============ -->
+<section class="sec alt linkedin-band">
+  <div class="wrap li-in">
+    <div>
+      <p class="kicker">Follow along</p>
+      <h2>I post charts and market notes on LinkedIn.</h2>
+      <p class="sub">
+        If Telegram isn't your thing, LinkedIn is where the slower, longer-form version goes —
+        trade breakdowns, session recaps and the occasional build update.
+      </p>
+    </div>
+    <a class="btn btn-gold btn-lg" href="https://linkedin.com/in/divine-abba-883540311" target="_blank" rel="noopener noreferrer" data-linkedin>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM2.4 9.75h5.16V21H2.4V9.75Zm7.9 0h4.95v1.54h.07c.69-1.24 2.37-2.05 4.06-2.05 4.34 0 5.14 2.7 5.14 6.2V21h-5.16v-4.9c0-1.17-.02-2.68-1.63-2.68-1.64 0-1.89 1.28-1.89 2.6V21H10.3V9.75Z"/></svg>
+      Follow me on LinkedIn
+    </a>
   </div>
 </section>
 
@@ -303,19 +430,19 @@
     <h2>Let's talk.</h2>
     <p class="sub">Web development enquiries, collaborations, or questions about the Telegram channel — my inbox is open.</p>
     <div class="links">
-      <a class="link-card" href="https://linkedin.com/in/divine-abba-883540311" target="_blank" rel="noopener noreferrer">
+      <a class="link-card" href="https://linkedin.com/in/divine-abba-883540311" target="_blank" rel="noopener noreferrer" data-linkedin>
         <span class="lc-k">LinkedIn</span>
         <span class="lc-v">/in/divine-abba-883540311</span>
         <span class="lc-a" aria-hidden="true">↗</span>
       </a>
-      <a class="link-card" href="mailto:hello@divineabba.com" data-email>
+      <a class="link-card" href="mailto:divineabbachimdirim1@gmail.com" data-email>
         <span class="lc-k">Email</span>
-        <span class="lc-v" data-email-text>hello@divineabba.com</span>
+        <span class="lc-v" data-email-text>divineabbachimdirim1@gmail.com</span>
         <span class="lc-a" aria-hidden="true">↗</span>
       </a>
-      <a class="link-card" href="https://wa.me/2340000000000" target="_blank" rel="noopener noreferrer" data-wa>
-        <span class="lc-k">WhatsApp</span>
-        <span class="lc-v" data-wa-text>+234 000 000 0000</span>
+      <a class="link-card" href="https://t.me/adcrim" target="_blank" rel="noopener noreferrer" data-tg>
+        <span class="lc-k">Telegram</span>
+        <span class="lc-v" data-tg-text>@adcrim — daily trade posts</span>
         <span class="lc-a" aria-hidden="true">↗</span>
       </a>
     </div>
@@ -331,9 +458,22 @@
       Risk warning: trading leveraged instruments such as FX, metals, oil and crypto carries a
       high risk of loss. Content here is educational and is not investment advice.
     </p>
-    <p><a href="#top">Back to top</a></p>
+    <p class="foot-links">
+      <a href="https://linkedin.com/in/divine-abba-883540311" target="_blank" rel="noopener noreferrer" data-linkedin>LinkedIn</a>
+      <a href="https://t.me/adcrim" target="_blank" rel="noopener noreferrer" data-tg>Telegram</a>
+      <a href="#top">Back to top</a>
+    </p>
   </div>
 </footer>
+
+<!-- sticky mobile CTA -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="false">
+  <a class="sticky-btn gold" href="https://t.me/adcrim" target="_blank" rel="noopener noreferrer" data-tg>
+    <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="currentColor"><path d="M21.9 3.4 1.9 11.2c-1 .4-1 1.8.1 2.1l4.9 1.6 1.9 5.9c.3.9 1.4 1.1 2 .4l2.7-2.6 5 3.7c.8.6 1.9.1 2.1-.9l3.1-15.6c.2-1-.8-1.8-1.8-1.4Zm-3.3 4.2-7.8 6.9-.3 3.4-1.3-4 9.4-6.3Z"/></svg>
+    Daily trades
+  </a>
+  <a class="sticky-btn" href="#contact">Hire me</a>
+</div>
 
 <script src="config.js"></script>
 <script src="main.js"></script>

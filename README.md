@@ -19,6 +19,20 @@ Built as plain HTML + CSS + JS: **no framework, no build step, no dependencies.*
 | `assets/divine-hero.jpg` | Portrait, 600×960 |
 | `assets/equity-curve.svg` | Generated equity-curve chart (~5 KB, sharp on retina) |
 | `assets/favicon.svg` | "DA" monogram favicon |
+
+### Sections (in order)
+
+Hero → Markets (6 instruments) → Method (4 steps) → Track record (equity curve) →
+Telegram → **Selected work (3 live projects)** → About → LinkedIn band → Contact.
+On mobile there is a hamburger menu and a sticky "Daily trades / Hire me" bar at the bottom.
+
+### The Selected work section
+
+Each project card shows a live iframe of the deployed site inside a browser frame, with a styled
+fallback panel behind it. If a host ever blocks embedding (`X-Frame-Options` / CSP), the fallback
+remains visible and the "Visit live site" link still works — so the section can never look broken.
+Projects: `propfirmintelligenence.vercel.app`, `divine-banking-web-app.vercel.app`,
+`group-6-capstone-project-two.vercel.app`.
 | `data/trades-raw.txt` | The broker ledger export, one line per trade |
 | `data/trades.json` | Parsed + verified trades (generated) |
 | `data/stats.json` | Computed statistics (generated) |
@@ -29,24 +43,26 @@ Built as plain HTML + CSS + JS: **no framework, no build step, no dependencies.*
 
 ---
 
-## Before you publish — 4 edits
+## Contact details — all wiring is done
 
-All four are in `config.js` except the domain.
+`config.js` is already set to your real details:
 
 ```js
 window.SITE = {
-  telegram: "https://t.me/",              // ← your channel invite link
-  email: "hello@divineabba.com",          // ← your real email
-  whatsapp: "2340000000000",              // ← digits only, country code first
-  whatsappDisplay: "+234 000 000 0000",   // ← how it displays on the page
-  ...
+  telegram: "https://t.me/adcrim",
+  email: "divineabbachimdirim1@gmail.com",
+  linkedin: "https://linkedin.com/in/divine-abba-883540311",
+  ticker: [...]
 }
 ```
 
-Then replace `divineabba.com` with your real domain in **`index.html`** (canonical, OG tags,
-JSON-LD), **`robots.txt`** and **`sitemap.xml`**.
+WhatsApp has been removed from the page entirely. Change any of the three links above and the
+nav, hero, Telegram band, LinkedIn band, contact cards, sticky mobile bar and footer all update
+at once — the markup never needs editing.
 
-Nothing else needs changing. The copy, colours and layout are complete.
+**Only remaining task:** if you attach a real domain, replace `divineabba.vercel.app` with it in
+**`index.html`** (canonical, OG, JSON-LD), **`robots.txt`** and **`sitemap.xml`**. On the free
+`*.vercel.app` URL nothing needs changing.
 
 ---
 
