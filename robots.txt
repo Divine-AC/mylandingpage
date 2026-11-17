@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://divineabba.com/sitemap.xml
