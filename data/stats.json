@@ -1,0 +1,114 @@
+{
+ "source": "data/trades-raw.txt (user-supplied broker export)",
+ "period": {
+  "from": "2026-09-10 14:06:27",
+  "to": "2026-11-11 12:29:53"
+ },
+ "closed_trades": 99,
+ "wins": 34,
+ "losses": 63,
+ "flat": 2,
+ "win_rate": 34.3,
+ "net_pnl": 486.43,
+ "gross_win": 20368.81,
+ "gross_loss": 19882.38,
+ "profit_factor": 1.02,
+ "avg_win": 599.08,
+ "avg_loss": 315.59,
+ "expectancy_per_trade": 4.91,
+ "largest_win": {
+  "profit": 2301.3,
+  "symbol": "FX:EURUSD",
+  "time": "2026-10-27 21:17:19"
+ },
+ "largest_loss": {
+  "profit": -1228.51,
+  "symbol": "FX:EURUSD",
+  "time": "2026-11-11 10:37:25"
+ },
+ "longest_win_streak": 3,
+ "longest_loss_streak": 12,
+ "start_balance": 13194.05,
+ "end_balance": 13680.48,
+ "max_drawdown_abs": 6158.09,
+ "max_drawdown_pct": 40.79,
+ "instruments": [
+  "BTCUSD",
+  "EURUSD",
+  "USDJPY",
+  "USOIL",
+  "XAGUSD",
+  "XAUUSD"
+ ],
+ "instrument_count": 6,
+ "by_symbol": {
+  "EURUSD": {
+   "trades": 29,
+   "wins": 6,
+   "net": -3998.71,
+   "gross_win": 5160.9800000000005,
+   "gross_loss": 9159.690000000002,
+   "win_rate": 20.7,
+   "profit_factor": 0.56
+  },
+  "XAUUSD": {
+   "trades": 23,
+   "wins": 10,
+   "net": 2521.78,
+   "gross_win": 5325.09,
+   "gross_loss": 2803.31,
+   "win_rate": 43.5,
+   "profit_factor": 1.9
+  },
+  "USDJPY": {
+   "trades": 22,
+   "wins": 9,
+   "net": 238.33,
+   "gross_win": 2979.93,
+   "gross_loss": 2741.6000000000004,
+   "win_rate": 40.9,
+   "profit_factor": 1.09
+  },
+  "XAGUSD": {
+   "trades": 17,
+   "wins": 5,
+   "net": -313.78,
+   "gross_win": 3877.44,
+   "gross_loss": 4191.219999999999,
+   "win_rate": 29.4,
+   "profit_factor": 0.93
+  },
+  "BTCUSD": {
+   "trades": 7,
+   "wins": 3,
+   "net": 9.37,
+   "gross_win": 995.93,
+   "gross_loss": 986.56,
+   "win_rate": 42.9,
+   "profit_factor": 1.01
+  },
+  "USOIL": {
+   "trades": 1,
+   "wins": 1,
+   "net": 2029.44,
+   "gross_win": 2029.44,
+   "gross_loss": 0.0,
+   "win_rate": 100.0,
+   "profit_factor": null
+  }
+ },
+ "net_by_month": {
+  "2026-09": -1137.23,
+  "2026-10": 144.98,
+  "2026-11": 1478.68
+ },
+ "short_count": 54,
+ "long_count": 45,
+ "snapshot_rows": [
+  {
+   "time": "2026-11-13 20:30:17",
+   "balance_after": 102297.18,
+   "profit": 2297.18
+  }
+ ]
+}
