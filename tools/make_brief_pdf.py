@@ -235,13 +235,12 @@ story += [
 ]
 
 decisions = [
-    ["Positioning", "Quantitative trader (primary) + civil engineer + software developer"],
+    ["Positioning", "Trader &amp; market analyst (primary) + software developer"],
     ["Primary CTA", "“Book a web development build” (services revenue)"],
     ["Secondary CTA", "“Join Telegram for daily trades” (free audience)"],
-    ["Performance", "Equity curve only, clearly labelled a <b>demo account</b> — no headline claims"],
+    ["Performance", "Equity curve only, labelled a <b>demo account</b> — no headline claims"],
     ["Contact", "LinkedIn, email, Telegram and GitHub — phone number removed"],
     ["Tone", "Sober, plain-spoken, no hype, no guarantees"],
-    ["CV", "Sourced from the LinkedIn profile: HND Civil Engineering (Distinction),\n     TS Academy full-stack (in progress), Ochacho Real Home, Gracious Grace School"],
 ]
 dt = Table([[Paragraph(a, S["cellb"]), Paragraph(b, S["cell"])] for a, b in decisions],
            colWidths=[33 * mm, CW - 33 * mm])
@@ -258,13 +257,12 @@ story += [
     Spacer(1, 6 * mm),
     callout(
         "Read this first — the honest version",
-        "The equity curve on the site comes from a <b>demo account</b>, not live capital. That "
-        "labelling matters: calling it a live account would be a false claim, and an informed "
-        "reader would spot the inconsistency. The account finished roughly flat over 99 trades "
-        f"({money(STATS['net_pnl'])} net, {STATS['win_rate']}% win rate in this window, maximum "
-        f"drawdown {STATS['max_drawdown_pct']}%), and the page says so plainly, including the "
-        "emotional rough patch behind the drawdown. Your broader record is stated separately as a "
-        "48–55% win rate. Nothing on the page guarantees a return, because nothing can.",
+        "The equity curve comes from a <b>demo account</b>, not live capital, and the page says so "
+        "in the heading, the caption, three notes and the footer. It finished roughly flat over 99 "
+        f"trades ({money(STATS['net_pnl'])} net, {STATS['win_rate']}% win rate in this window, "
+        f"maximum drawdown {STATS['max_drawdown_pct']}%), including a difficult emotional stretch that "
+        "is left in on purpose. The broader record is stated separately as a 48–55% win rate. Nothing "
+        "on the page guarantees a return, because nothing can.",
         "warn",
     ),
 ]
@@ -336,128 +334,111 @@ story += [PageBreak(), Paragraph("2 · The copy deck", S["h1"]), rule(0, 9),
 
 copy_sections = [
     ("2.1 Navigation bar", [
-        ("Brand", "DA monogram + “Divine Abba” / “Trader · Engineer · Developer”"),
-        ("Links", "About · Trading · Track record · Work · Build with me · Contact"),
-        ("Button", "Telegram"),
+        ("Brand", "DA monogram + “Divine Abba” / “Trader &amp; Market Analyst”"),
+        ("Links", "About · Markets · Method · Track record · Web dev · Contact"),
+        ("Button", "Join Telegram"),
     ]),
     ("2.2 Hero (above the fold)", [
-        ("Eyebrow", "Abuja, Nigeria · Trader · Civil Engineer · Developer"),
-        ("Headline", "Quantitative trader.<br/>Civil engineer.<br/>Builder."),
-        ("Sub-headline", "I'm Divine Abba. I've traded global markets for five years — gold, FX, oil "
-                         "and crypto — and I hold an HND in Civil Engineering with Distinction. I also "
-                         "build the web applications I use to trade, and ship them live."),
-        ("Second line", "Trading is where most of my time goes. Engineering is how I think. Code is how I ship."),
-        ("Buttons", "Join Telegram for daily trades  ·  See my live projects"),
-        ("Proof strip", "5 yrs in the markets · 6 instruments traded · 4 live apps shipped · "
-                        "HND civil engineering, distinction"),
-        ("Visual", "B&amp;W portrait right (300px cap), instrument ticker beneath it."),
+        ("Eyebrow", "Lagos, Nigeria · Trading since 2021"),
+        ("Headline", "I read markets for a living.<br/>Gold, FX, oil &amp; crypto."),
+        ("Sub-headline", "I'm Divine Abba — a discretionary trader and market analyst. I publish "
+                         "my trade ideas for free every day, show my reasoning instead of just my "
+                         "results, and build the web tools I use to trade."),
+        ("Buttons", "Book a web development build  ·  Join Telegram for daily trades"),
+        ("Proof strip", "6 markets covered · Daily trade posts · 4 yrs in the markets"),
+        ("Visual", "B&amp;W portrait, rounded frame, subtle gold glow. A strip beneath it names "
+                   "the six instruments you follow."),
     ]),
-    ("2.3 About — three disciplines", [
-        ("H2", "Three disciplines, one way of thinking."),
-        ("Framing", "Trading is the main thing I do and the thing I talk about most. The other two "
-                    "disciplines are why the trading is systematic."),
-        ("01 Primary", "Quantitative trading — five years across metals, FX, energy and crypto; "
-                       "technical analysis with algorithmic-style execution; capital preservation; "
-                       "written journal; funded account taken to payout."),
-        ("02 Foundation", "Civil engineering — HND with Distinction from Abia State Polytechnic; "
-                          "structural analysis, reinforced concrete and steel design, surveying, "
-                          "site supervision; site work at Ochacho Real Home, Abuja."),
-        ("03 Builder", "Software development — HTML, CSS, JavaScript, TypeScript, Node.js, MongoDB; "
-                       "full-stack certification at TS Academy in progress; products deployed, not demos."),
-        ("Ethos", "“Engineering taught me to check the numbers before trusting the drawing. Trading "
-                  "taught me that the market does not care how confident I am. Software taught me to "
-                  "ship, measure and fix.”"),
-        ("Experience", "2021–present Financial Markets Analyst &amp; Quantitative Trader (self-employed); "
-                       "May 2023–Dec 2024 Civil Engineer, Ochacho Real Home; Mar 2023–Feb 2024 Teacher, "
-                       "Gracious Grace School."),
-        ("Education", "2020–2025 HND Civil Engineering Technology, Abia State Polytechnic, Distinction; "
-                      "2026 Full-Stack Software Development, TS Academy, in progress; next: BIM &amp; ConTech."),
-        ("Skills chips", "Technical analysis · Quantitative modelling · Risk management · Structural "
-                         "analysis · Site supervision · HTML/CSS/JS · Node.js/MongoDB · TypeScript"),
+    ("2.3 About", [
+        ("Kicker / H2", "About / “Analysis first. Risk always.”"),
+        ("Paragraph 1", "I started trading in 2021 out of a simple obsession: understanding why "
+                        "price moves. That turned into a full-time practice across precious metals, "
+                        "FX majors, crude and crypto — the same six instruments I still trade today, "
+                        "because depth in a few markets beats a shallow opinion on fifty."),
+        ("Paragraph 2", "My work is discretionary and process-driven. I trade a small number of "
+                        "high-conviction setups around session liquidity, key levels and macro "
+                        "catalysts, and I size every position from the stop — never the other way "
+                        "round. When a trade is wrong, the loss is small and already planned. When "
+                        "the read is right, I let the position work."),
+        ("Paragraph 3", "I publish my analysis openly. Not because every call is right — plenty "
+                        "aren't — but because a track record you can't inspect isn't a track record. "
+                        "You can see how I think, what I got wrong, and how I managed it."),
+        ("Chips", "Technical analysis · Macro catalysts · Session liquidity · Risk-first sizing · "
+                  "Trade journaling"),
     ]),
-    ("2.4 Markets (trading)", [
+    ("2.4 Markets I cover", [
         ("H2", "Six instruments. Watched every session."),
-        ("Sub", "Depth in a few markets beats a shallow opinion on fifty."),
-        ("Gold XAU/USD", "My primary market. Session structure, dollar correlation and safe-haven flows "
-                         "around CPI, NFP and Fed decisions."),
-        ("Silver XAG/USD", "Higher beta, wider ranges. Traded for the moves gold is too slow to give, "
-                           "with tighter size."),
-        ("EUR/USD", "The cleanest read on dollar strength. London-open liquidity sweeps and trend continuation."),
-        ("USD/JPY", "Carry, intervention risk and yield spreads. News matters as much as the chart."),
-        ("Crude USOIL", "Supply headlines and inventory data. Traded selectively, around OPEC and EIA events."),
-        ("Bitcoin BTC/USD", "Liquidity-driven and 24/7. Used to express risk appetite, not to chase volatility."),
+        ("Gold XAU/USD", "My primary market. Session structure, dollar correlation and safe-haven "
+                         "flows around CPI, NFP and Fed decisions."),
+        ("Silver XAG/USD", "Higher beta, wider ranges. I trade it for the moves gold is too slow to "
+                           "give, with tighter size."),
+        ("EUR/USD", "The cleanest read on dollar strength. London-open liquidity sweeps and trend "
+                    "continuation."),
+        ("USD/JPY", "Carry, intervention risk and yield spreads. A market where news matters as "
+                    "much as the chart."),
+        ("Crude USOIL", "Supply headlines and inventory data. Traded selectively, around OPEC and "
+                        "EIA events."),
+        ("Bitcoin BTC/USD", "Liquidity-driven and 24/7. I use it to express risk appetite, not to "
+                            "chase volatility."),
     ]),
-    ("2.5 How I trade (inside the trading section)", [
+    ("2.5 How I trade", [
         ("H2", "A repeatable process, not a hot streak."),
-        ("01 Context", "Higher-timeframe bias first. No bias, no trade."),
-        ("02 Level", "Price must reach a level identified before the session opened — liquidity sweeps, "
-                     "broken structure, session extremes."),
-        ("03 Risk", "Position size calculated from the invalidation point. Loss defined before entry."),
-        ("04 Review", "Every trade journaled with a screenshot and the reason."),
+        ("01 Context", "Higher-timeframe bias first. Where is price relative to the week's range, "
+                       "the prior high/low and the dollar? No bias, no trade."),
+        ("02 Level", "I wait for price to reach a level I identified before the session opened — "
+                     "liquidity sweeps, broken structure, session extremes."),
+        ("03 Risk", "Position size is calculated from the invalidation point. If the stop is where "
+                    "I'm wrong, the loss is defined before entry, every time."),
+        ("04 Review", "Every trade is journaled with a screenshot and the reason. The review is "
+                      "where the edge actually comes from."),
         ("Discipline strip", "Defined risk · Selective · Journaled · Transparent"),
     ]),
     ("2.6 Track record (demo account)", [
         ("H2", "A demo account, traded like it was real."),
-        ("Opening disclaimer", "“To be clear: this is a <b>demo account</b>, not my live money. I ran it with "
-                               "the same risk rules, the same journal and the same London and New York sessions "
-                               "I use on a funded account.”"),
-        ("Chart", "Equity curve, 99 closed trades, 10 Sep – 11 Nov 2026. Axis labelled in USD; no "
-                  "headline performance statistics."),
-        ("Note 1 — what this shows", "Roughly flat over the window (about +$486) with a maximum drawdown "
-                                     "near 41%. Presented as-is, not as a highlight reel."),
-        ("Note 2 — why the dip", "A difficult emotional period during this stretch, traded through. "
-                                 "Kept in the record because an honest journal is worth more."),
-        ("Note 3 — full picture", "Across the complete record the win rate runs <b>48–55%</b>; this window "
-                                  "came in below that during the dip."),
+        ("Opening disclaimer", "“This is a <b>demo account</b> — not my live money. I ran it with the same risk "
+                               "rules, the same journal and the same London and New York sessions I use on a "
+                               "funded account.”"),
+        ("Chart", "Equity curve, 99 closed trades, 10 Sep – 11 Nov 2026. No headline performance statistics."),
+        ("Note 1 — what this shows", "Roughly flat over the window (about +$486) with a maximum drawdown near "
+                                     "41%, presented as-is rather than as a highlight reel."),
+        ("Note 2 — why the dip", "A difficult emotional period during this stretch, traded through. Kept in "
+                                 "the record because an honest journal is worth more."),
+        ("Note 3 — full picture", "Across the complete record the win rate runs <b>48–55%</b>; this window came "
+                                  "in below that during the dip."),
         ("Footnote", "Demo results are not achieved with real capital and exclude slippage, spreads and "
                      "live-account psychological pressure. Past performance is not indicative of future "
                      "results. Not financial advice."),
     ]),
     ("2.7 Telegram band", [
         ("Kicker / H2", "Free · Daily / “Daily trade posts on Telegram.”"),
-        ("Body", "Charts, levels, bias and management — posted as taken. No signal-selling, no paid "
-                 "group, no hype."),
-        ("Button", "Join the Telegram channel → t.me/adcrim"),
-        ("List", "Pre-session bias · entry/stop/target on posted setups · written reasoning · "
-                 "post-trade reviews including the losers"),
+        ("Body", "Charts, levels, bias and management — posted as I take them. No signal-selling, "
+                 "no paid group, no hype. Join and watch me work before you decide anything."),
+        ("Button", "Join the Telegram channel"),
+        ("List", "Pre-session bias for gold, FX, oil and crypto · Entry, stop and target on posted "
+                 "setups · Written reasoning, not just a chart screenshot · Post-trade reviews, "
+                 "including the losers"),
     ]),
-    ("2.8 Selected work", [
-        ("H2", "Everything I've built, running live."),
-        ("Sub", "Four deployed applications — not mockups. Each preview is the real site loading in "
-                "the frame."),
-        ("Project 1", "PropFirm Intelligence — propfirmintelligenence.vercel.app — Next.js + TypeScript; "
-                      "prop-firm rule matching and CSV trade analytics."),
-        ("Project 2", "Divine Bank — divine-banking-web-app.vercel.app — Vite front end, Node API, "
-                      "session auth; opens on the sign-in screen."),
-        ("Project 3", "JRP Job Ready Platform — group-6-capstone-project-two.vercel.app — job search "
-                      "platform, TS Academy group capstone."),
-        ("Project 4", "This site — hand-written HTML/CSS/vanilla JS, Python chart pipeline, no build step."),
-        ("More code", "BlockLedger (TypeScript) · Jumia-style REST backend (Node) · reset-css · "
-                      "all repositories on github.com/Divine-AC"),
+    ("2.8 Web development", [
+        ("H2", "I also build the sites and tools."),
+        ("Body", "Traders live in spreadsheets, dashboards and broken broker portals. I build "
+                 "clean, fast, mobile-first websites and small tools for traders, coaches and "
+                 "small businesses — the kind of thing that takes one or two weeks, not three "
+                 "months."),
+        ("Services", "Landing pages · Trading dashboards · Portfolios &amp; blogs · Fixes &amp; "
+                     "speed work"),
+        ("Button", "Book a build"),
     ]),
-    ("2.9 Build with me", [
-        ("H2", "I build the thing you keep postponing."),
-        ("Body", "Five years inside trading platforms and spreadsheets, plus shipped products in "
-                 "Next.js, Node and plain hand-written code — I understand the domain and the codebase."),
-        ("Services", "Landing pages · Trading dashboards · Full-stack web apps · Data &amp; CSV tooling · "
-                     "Fixes &amp; speed work · Engineering support (drawings, estimation, site docs)"),
-    ]),
-    ("2.10 LinkedIn band", [
-        ("H2", "I post charts and build updates on LinkedIn."),
-        ("Button", "Follow me on LinkedIn → linkedin.com/in/divine-abba-883540311"),
-    ]),
-    ("2.11 Contact", [
+    ("2.9 Contact", [
         ("H2", "Let's talk."),
-        ("Cards", "LinkedIn · Email (divineabbachimdirim1@gmail.com) · Telegram (@adcrim) · "
-                  "GitHub (github.com/Divine-AC)"),
-        ("Note", "The WhatsApp card and phone number have been removed entirely, and the "
-                 "parenthetical “( +234 )” line was deleted from the contact block."),
+        ("Sub", "Web development enquiries, collaborations, or questions about the Telegram "
+                "channel — my inbox is open."),
+        ("Links", "LinkedIn /in/divine-abba-883540311 · Email · Telegram @adcrim"),
     ]),
-    ("2.12 Footer", [
-        ("Copyright", "© 2026 Divine Abba · Abuja, Nigeria"),
-        ("Risk warning", "Trading leveraged instruments carries a high risk of loss. The track record "
-                         "shown is from a demo account. Content is educational and is not investment advice."),
-        ("Links", "LinkedIn · GitHub · Telegram"),
+    ("2.10 Footer", [
+        ("Copyright", "© 2026 Divine Abba · Lagos, Nigeria"),
+        ("Risk warning", "Trading leveraged instruments such as FX, metals, oil and crypto carries "
+                         "a high risk of loss. Content here is educational and is not investment "
+                         "advice."),
     ]),
 ]
 
@@ -611,16 +592,13 @@ story += [
 ]
 story += [KeepTogether([Paragraph("4.6 The four things you must change before publishing", S["h2"])])]
 todo = [
-    ("Domain", "Optional. The site is live on <font face='Courier' size='7.6'>mylandingpage-taupe.vercel.app</font>. "
-               "If you attach a real domain, replace <font face='Courier' size='7.6'>mylandingpage-taupe.vercel.app</font> "
-               "in index.html, robots.txt and sitemap.xml."),
-    ("LinkedIn profile", "Keep <font face='Courier' size='7.6'>linkedin.com/in/divine-abba-883540311</font> "
-                         "in config.js — every LinkedIn button on the page reads from it."),
-    ("Telegram", "<font face='Courier' size='7.6'>t.me/adcrim</font> is set. If the channel handle changes, "
-                 "update one line in config.js."),
-    ("Demo-account label", "<b>Do not remove it.</b> The chart must stay labelled as a demo account, "
-                           "and the 48–55% figure must stay framed as your broader record rather than "
-                           "this window's result."),
+    ("Domain", "Optional. Live on <font face='Courier' size='7.6'>mylandingpage-taupe.vercel.app</font>. "
+               "If you attach a real domain, update index.html, robots.txt and sitemap.xml."),
+    ("Telegram", "<font face='Courier' size='7.6'>t.me/adcrim</font> is set in config.js."),
+    ("Demo label", "<b>Do not remove it.</b> The chart must stay labelled a demo account, and the "
+                   "48–55% figure stays framed as the broader record."),
+    ("Everything else", "Copy, colours and layout are complete. Keep one accent colour, no carousels, "
+                        "no performance claims."),
 ]
 for i, (k, v) in enumerate(todo, 1):
     story.append(Paragraph(f"<b>{i}. {k}</b> — {v}", S["body"]))
@@ -636,9 +614,8 @@ story += [PageBreak()]
 # ---- 5. ledger audit ----
 story += [
     Paragraph("5 · Your trading ledger, audited", S["h1"]), rule(0, 9),
-    P("<b>This curve is a demo account</b> — a practice account funded with virtual capital, "
-      "traded with the same rules as live. It must always be labelled that way on the page. "
-      "All 101 rows of the export you provided were parsed programmatically "
+    P("<b>This is a demo account</b> — virtual capital, traded with live rules. It must always be "
+      "labelled that way. All 101 rows of the export you provided were parsed programmatically "
       "(<font face='Courier' size='7.6'>tools/analyse_trades.py</font>) rather than read by eye. "
       "Each row's balance movement was cross-checked against its stated profit, and every profit "
       "figure reconciles to (exit − entry) × units × direction. The figures below are therefore "
@@ -657,7 +634,7 @@ story += [
 story += [Paragraph("5.1 What the numbers mean", S["h2"])]
 mean_rows = [
     ("Account type", "<b>Demo account</b> (virtual funds, live rules) — not a live account"),
-    ("Win rate across full record", "<b>48–55%</b> (user-stated); 34.3% in this particular window"),
+    ("Win rate, full record", "<b>48–55%</b> (user-stated); 34.3% in this particular window"),
     ("Period covered", f"{STATS['period']['from'][:10]} → {STATS['period']['to'][:10]} (65 days)"),
     ("Trades / wins / losses / scratch",
      f"{STATS['closed_trades']} / {STATS['wins']} / {STATS['losses']} / {STATS['flat']}"),
@@ -725,18 +702,16 @@ story += [numbered([
     "risk framework would treat that as outside tolerance. It is worth stating in your own words on "
     "the page — “I had a rough stretch, here is what I changed” is stronger material than a green "
     "number.",
-    "<b>This window under-represents your real record.</b> The 34.3% win rate here sits well below "
-    "the 48–55% you run across your full trading history, and the account finished roughly flat "
-    "(+$486, profit factor 1.02). Average win ($599) versus average loss ($316) is the right shape, "
-    "but one 65-day sample during a difficult emotional stretch cannot demonstrate an edge. Say that "
-    "on the page — the explanation is more convincing than the number.",
+    "<b>This window under-represents your real record.</b> 34.3% here sits well below the 48–55% you "
+    "run across your full trading history, and the account finished roughly flat (+$486, profit factor "
+    "1.02). One 65-day sample during a difficult emotional stretch cannot demonstrate an edge — say so "
+    "on the page, because the explanation is more convincing than the number.",
 ])]
 
 story.append(callout(
     "Why the page shows a curve and no numbers",
-    "Three reasons. First, it is a demo account — publishing demo figures as if they were live "
-    "results is misleading. Second, commercially, a win-rate badge from a flat window invites a "
-    "comparison you lose. Third, legally, in the UK, EU, Nigeria and most other jurisdictions, publishing performance figures "
+    "Two reasons. Commercially, a win-rate badge invites a comparison you currently lose. "
+    "Legally, in the UK, EU, Nigeria and most other jurisdictions, publishing performance figures "
     "to attract clients or followers can bring you inside financial-promotion rules. An equity "
     "chart with a clear “past performance” disclaimer, presented as a personal journal rather than "
     "an advertised service, is far lower-risk — and it still proves the trades are real. If you ever "
@@ -787,7 +762,7 @@ story += [Spacer(1, 6), Paragraph("7 · Launch checklist", S["h1"]), rule(0, 9)]
 checks = [
     ("Content", "Telegram link is a real invite link and opens on mobile"),
     ("Content", "Demo-account label still present under the track record"),
-    ("Content", "Contact cards show LinkedIn, email, Telegram and GitHub — no phone number"),
+    ("Content", "Contact shows LinkedIn, email, Telegram, GitHub — no phone number"),
     ("Content", "Portrait is your final chosen shot; delete the unused crops"),
     ("Content", "The 13 Nov ledger row either explained or removed from the chart"),
     ("Content", "Read every line of the copy out loud — cut anything you would not say"),
