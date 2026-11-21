@@ -163,7 +163,7 @@ def deco(canv, doc):
     canv.line(M, 14 * mm, PW - M, 14 * mm)
     canv.setFillColor(MUTED)
     canv.setFont("Helvetica", 6.9)
-    canv.drawString(M, 10 * mm, "Prepared for Divine Abba — trader & market analyst, Lagos, Nigeria")
+    canv.drawString(M, 10 * mm, "Prepared for Divine Abba — trader, engineer & developer, Abuja, Nigeria")
     canv.drawRightString(PW - M, 10 * mm, str(canv.getPageNumber()).zfill(2))
     canv.restoreState()
 
@@ -239,7 +239,7 @@ decisions = [
     ["Primary CTA", "“Book a web development build” (services revenue)"],
     ["Secondary CTA", "“Join Telegram for daily trades” (free audience)"],
     ["Performance", "Equity curve only — no headline claims, no account-type explanation"],
-    ["Contact", "LinkedIn, email, Telegram and GitHub — phone number removed"],
+    ["Contact", "LinkedIn, email, Telegram, X and GitHub — phone number removed"],
     ["Tone", "Sober, plain-spoken, no hype, no guarantees"],
 ]
 dt = Table([[Paragraph(a, S["cellb"]), Paragraph(b, S["cell"])] for a, b in decisions],
@@ -293,7 +293,8 @@ aud = [
     ["Small business owner", "“Can this person build my site?”", "Clear services, a page that itself looks good, easy contact"],
     ["Prospective follower", "“Is this trader worth following?”", "Named markets, a visible method, a clean Telegram link"],
     ["Fellow trader / peer", "“Is this person legitimate?”", "Unedited curve, journaled process, no bragging"],
-    ["Recruiter / collaborator", "“What is his background?”", "Positioning line, method, LinkedIn"],
+    ["Recruiter / collaborator", "“What is he qualified for?”", "The three disciplines stated outright, with credentials and a direct contact"],
+    ["Hiring manager (engineering)", "“Is he a real civil engineer?”", "HND Distinction, named subject areas, site-supervision work"],
 ]
 hdr_w = st("hdrw", fontName="Helvetica-Bold", fontSize=7.4, leading=9.6, textColor=colors.white)
 at = Table([[(Paragraph(c, hdr_w) if i == 0 else Paragraph(c, S["cell"])) for c in r]
@@ -334,11 +335,11 @@ story += [PageBreak(), Paragraph("2 · The copy deck", S["h1"]), rule(0, 9),
 copy_sections = [
     ("2.1 Navigation bar", [
         ("Brand", "DA monogram + “Divine Abba” / “Trader &amp; Market Analyst”"),
-        ("Links", "About · Markets · Method · Track record · Web dev · Contact"),
+        ("Links", "Markets · Method · Track record · Work · Services · About · Contact"),
         ("Button", "Join Telegram"),
     ]),
     ("2.2 Hero (above the fold)", [
-        ("Eyebrow", "Lagos, Nigeria · Trading since 2021"),
+        ("Eyebrow", "Abuja, Nigeria · Trading since 2021"),
         ("Headline", "I read markets for a living.<br/>Gold, FX, oil &amp; crypto."),
         ("Sub-headline", "I'm Divine Abba — a discretionary trader and market analyst. I publish "
                          "my trade ideas for free every day, show my reasoning instead of just my "
@@ -421,15 +422,18 @@ copy_sections = [
         ("Services", "Landing pages · Trading dashboards · Portfolios &amp; blogs · Fixes &amp; "
                      "speed work"),
         ("Button", "Book a build"),
+        ("2.8b Services", "“Also available for” — three disciplines stated plainly: web developer, "
+                          "civil engineer (HND Distinction), market analyst. Each with what is "
+                          "delivered and how to enquire."),
     ]),
     ("2.9 Contact", [
         ("H2", "Let's talk."),
-        ("Sub", "Web development enquiries, collaborations, or questions about the Telegram "
-                "channel — my inbox is open."),
-        ("Links", "LinkedIn /in/divine-abba-883540311 · Email · Telegram @adcrim"),
+        ("Sub", "Software builds, civil engineering work, collaborations, or questions about the "
+                "Telegram channel — my inbox is open."),
+        ("Links", "LinkedIn /in/divine-abba-883540311 · Email · Telegram @adcrim · X @ad_crim1"),
     ]),
     ("2.10 Footer", [
-        ("Copyright", "© 2026 Divine Abba · Lagos, Nigeria"),
+        ("Copyright", "© 2026 Divine Abba · Abuja, Nigeria"),
         ("Risk warning", "Trading leveraged instruments such as FX, metals, oil and crypto carries "
                          "a high risk of loss. Content here is educational and is not investment "
                          "advice."),
@@ -534,7 +538,7 @@ story += [
         "index.html          markup, semantic sections, JSON-LD Person schema<br/>"
         "styles.css          all styling — one file, 1 request<br/>"
         "main.js             contact wiring, ticker, scroll reveal (~3 KB)<br/>"
-        "config.js           <b>the only file you edit</b>: Telegram, email, LinkedIn<br/>"
+        "config.js           <b>the only file you edit</b>: Telegram, email, LinkedIn, X<br/>"
         "assets/divine-hero.jpg    portrait, 600×960, ~90 KB<br/>"
         "assets/equity-curve.svg   generated chart, ~5 KB, resolution-independent<br/>"
         "assets/favicon.svg        DA monogram<br/>"
@@ -576,7 +580,7 @@ story += [
     bullet([
         "Title, description, canonical, Open Graph and Twitter card all set in index.html.",
         "<font face='Courier' size='7.6'>application/ld+json</font> Person schema — name, job title, "
-        "Lagos, knowsAbout, LinkedIn as sameAs.",
+        "Abuja, knowsAbout, with LinkedIn, Telegram and X as sameAs.",
         "Semantic heading order, descriptive link text, sitemap + robots.txt included.",
         "<b>Before launch:</b> buy the domain, replace every "
         "<font face='Courier' size='7.6'>https://divineabba.com/</font> occurrence in index.html, "
@@ -608,7 +612,7 @@ story += [PageBreak()]
 # ---- 5. ledger audit ----
 story += [
     Paragraph("5 · Your trading ledger, audited", S["h1"]), rule(0, 9),
-    P("All 101 rows of the export you provided were parsed programmatically "
+    P("All 102 rows of the export you provided were parsed programmatically "
       "(<font face='Courier' size='7.6'>tools/analyse_trades.py</font>) rather than read by eye. "
       "Each row's balance movement was cross-checked against its stated profit, and every profit "
       "figure reconciles to (exit − entry) × units × direction. The figures below are therefore "
@@ -752,7 +756,7 @@ story += [
 story += [Spacer(1, 6), Paragraph("7 · Launch checklist", S["h1"]), rule(0, 9)]
 checks = [
     ("Content", "Telegram link is a real invite link and opens on mobile"),
-    ("Content", "Contact shows LinkedIn, email, Telegram, GitHub — no phone number"),
+    ("Content", "Contact shows LinkedIn, email, Telegram, X, GitHub — no phone number"),
     ("Content", "Portrait is your final chosen shot; delete the unused crops"),
     ("Content", "The 13 Nov ledger row either explained or removed from the chart"),
     ("Content", "Read every line of the copy out loud — cut anything you would not say"),
