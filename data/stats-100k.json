@@ -1,26 +1,94 @@
 {
- "factor": 7.579174,
- "source_start": 13194.05,
- "source_end": 20102.79,
- "start": 100000.0,
- "end": 152362.54,
- "net": 52362.54,
- "return_pct": 52.36,
- "peak": 152362.54,
- "max_drawdown": 46673.24,
- "max_drawdown_pct": 30.63,
- "trades": 102,
- "wins": 37,
- "losses": 63,
- "win_rate": 36.3,
- "profit_factor": 1.35,
- "avg_win": 5487.96,
- "avg_loss": -2391.94,
- "largest_win": 26268.43,
- "largest_loss": -9311.09,
- "expectancy": 513.36,
+ "source": "data/trades-100k-raw.txt (user-supplied broker export, $100,000 account)",
+ "basis": "actual ledger \u2014 no scaling, no rebasing",
  "period": {
-  "from": "2026-09-10",
-  "to": "2026-11-20"
- }
+  "from": "2026-11-13 20:30:17",
+  "to": "2026-11-20 06:47:34"
+ },
+ "days": 6,
+ "closed_trades": 10,
+ "wins": 6,
+ "losses": 4,
+ "flat": 0,
+ "win_rate": 60.0,
+ "net_pnl": 21055.14,
+ "return_pct": 21.06,
+ "gross_win": 35687.16,
+ "gross_loss": 14632.02,
+ "profit_factor": 2.44,
+ "avg_win": 5947.86,
+ "avg_loss": -3658.01,
+ "expectancy_per_trade": 2105.51,
+ "largest_win": {
+  "profit": 15637.32,
+  "symbol": "OANDA:XAUUSD",
+  "time": "2026-11-20 06:47:34"
+ },
+ "largest_loss": {
+  "profit": -4943.0,
+  "symbol": "FX:XAGUSD",
+  "time": "2026-11-18 02:00:46"
+ },
+ "longest_win_streak": 3,
+ "longest_loss_streak": 3,
+ "start_balance": 100000.0,
+ "end_balance": 121055.15,
+ "peak": 121055.15,
+ "max_drawdown_abs": 13467.42,
+ "max_drawdown_pct": 13.16,
+ "instruments": [
+  "EURUSD",
+  "USOIL",
+  "XAGUSD",
+  "XAUUSD"
+ ],
+ "instrument_count": 4,
+ "by_symbol": {
+  "XAGUSD": {
+   "trades": 4,
+   "wins": 3,
+   "net": 12716.53,
+   "gross_win": 17659.53,
+   "gross_loss": 4943.0,
+   "win_rate": 75.0,
+   "profit_factor": 3.57
+  },
+  "USOIL": {
+   "trades": 2,
+   "wins": 0,
+   "net": -7733.25,
+   "gross_win": 0.0,
+   "gross_loss": 7733.25,
+   "win_rate": 0.0,
+   "profit_factor": 0.0
+  },
+  "EURUSD": {
+   "trades": 2,
+   "wins": 1,
+   "net": -204.64,
+   "gross_win": 1751.13,
+   "gross_loss": 1955.77,
+   "win_rate": 50.0,
+   "profit_factor": 0.9
+  },
+  "XAUUSD": {
+   "trades": 2,
+   "wins": 2,
+   "net": 16276.5,
+   "gross_win": 16276.5,
+   "gross_loss": 0.0,
+   "win_rate": 100.0,
+   "profit_factor": null
+  }
+ },
+ "net_by_month": {
+  "2026-11": 21055.14
+ },
+ "short_count": 8,
+ "long_count": 2,
+ "final_two_trades": 30474.25,
+ "net_without_final_two": -9419.11,
+ "max_notional": 2186786.08,
+ "max_leverage": 24.62,
+ "max_risk_pct": 5.02
 }

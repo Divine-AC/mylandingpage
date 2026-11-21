@@ -38,7 +38,11 @@ Projects: `propfirmintelligenence.vercel.app`, `divine-banking-web-app.vercel.ap
 | `data/stats.json` | Computed statistics (generated) |
 | `tools/analyse_trades.py` | Parses the ledger, verifies every row, writes the JSON |
 | `tools/make_chart.py` | Regenerates `assets/equity-curve.svg` from the data |
-| `tools/make_stats_100k.py` | Regenerates `assets/equity-100k.svg` + `data/stats-100k.json` (record rebased to $100k) |
+| `data/trades-100k-raw.txt` | The **$100,000 account** ledger export — a separate account |
+| `data/trades-100k.json` | Parsed + verified $100k trades (generated) |
+| `data/stats-100k.json` | Computed $100k statistics (generated) |
+| `tools/analyse_100k.py` | Parses + verifies the $100k ledger, writes the JSON |
+| `tools/make_chart_100k.py` | Regenerates `assets/equity-100k.svg` from the $100k data |
 | `tools/make_brief_pdf.py` | Regenerates the 14-page brief PDF |
 | `docs/Divine-Abba-Landing-Page-Brief.pdf` | **The deliverable brief** — strategy, full copy deck, design system, technical spec, ledger audit, compliance wording, launch checklist, full trade table |
 
@@ -109,10 +113,17 @@ The analyser **asserts** that every row's profit equals `balance_after − balan
 `(exit − entry) × units × direction`. If a row doesn't reconcile, it stops with an error rather
 than quietly producing a wrong chart.
 
-> ⚠️ **Known data issue:** the `2026-11-13 20:30:17` row shows a balance jump from `100,000.00`
-> to `102,297.18` while every other row sits between ~8,200 and ~15,800. It does not chain with
-> the rest of the ledger, so it is **excluded from the chart** and flagged in the PDF. Work out
-> what that row is (separate account? omitted deposit?) before publishing it anywhere.
+### Two accounts, two ledgers
+
+> ✅ **Resolved.** The `2026-11-13 20:30:17` row that appeared to break the small-account ledger
+> is the **first trade of a separate $100,000 account**. It lives in its own file,
+> `data/trades-100k-raw.txt`, and chains perfectly within that account: every `balance_before`
+> equals the previous row's `balance_after`, and every profit equals `(exit − entry) × units ×
+> direction` to the cent. Nothing is scaled or rebased — these are real fills.
+
+The small account (`data/trades-raw.txt`, $13,194 → $20,103, 102 trades, 10 Sep – 20 Nov) and the
+$100,000 account (10 trades, 13 – 20 Nov, $100,000 → $121,055) are analysed by separate scripts and
+are **never mixed** into one curve.
 
 ---
 
