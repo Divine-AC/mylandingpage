@@ -282,12 +282,6 @@ p{margin:0}
 .pair-badge img,.single-icon img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
 .single-icon{justify-content:center}
 .single-icon img{width:34px;height:34px}
-.stat-levels{gap:0}
-.stat-level{display:flex;flex-direction:column;gap:3px;padding:8px 0;border-top:1px solid var(--line-soft)}
-.stat-level>span{font-size:.7rem;color:var(--muted)}
-.stat-level strong{font-size:1.08rem}
-.stat-level strong.up{color:#6fd0a0}
-.stat-level strong.down{color:#e5928a}
 .card h3{margin-bottom:8px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:1rem}
 .card .sym{font-size:.7rem;letter-spacing:.1em;color:var(--muted);font-weight:600}
 .card p{color:var(--muted);font-size:.9rem;line-height:1.6}
@@ -505,7 +499,7 @@ p{margin:0}
 /* 12 cells divide exactly into 4x3 — auto-fit produced 6 columns on desktop
    (cramped) or a ragged 5+5+2, so the column count is set explicitly. */
 .stat-grid{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  display:grid;grid-template-columns:repeat(5,minmax(0,1fr));
   gap:1px;margin-top:24px;background:var(--line-soft);
   border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;
 }
@@ -519,12 +513,6 @@ p{margin:0}
 }
 .stat:hover{background:var(--panel-2)}
 .stat-k{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.stat-levels{gap:0}
-.stat-level{display:flex;flex-direction:column;gap:3px;padding:8px 0;border-top:1px solid var(--line-soft)}
-.stat-level>span{font-size:.7rem;color:var(--muted)}
-.stat-level strong{font-size:1.08rem}
-.stat-level strong.up{color:#6fd0a0}
-.stat-level strong.down{color:#e5928a}
 
 .stat strong{
   font-size:1.18rem;letter-spacing:-.025em;line-height:1.15;
