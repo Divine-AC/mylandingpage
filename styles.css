@@ -771,7 +771,7 @@ p{margin:0}
 .replay-chart.replay-ready .market-level{stroke-dashoffset:600;opacity:.1}
 .replay-chart.is-playing .market-level{animation:level-show .8s 4.6s ease-out forwards}
 .replay-chart.replay-ready .market-level-label{opacity:0}
-.replay-chart.is-playing .market-level-label{animation:label-show .3s 5s ease-out forwards}
+.replay-chart.is-playing .market-level-label{animation:label-show .3s 5.2s ease-out forwards}
 .replay-chart.is-paused .candle,.replay-chart.is-paused .market-trendline,.replay-chart.is-paused .market-level,.replay-chart.is-paused .market-level-label{animation-play-state:paused}
 @keyframes candle-print{from{opacity:.15;transform:scaleY(.08)}to{opacity:1;transform:scaleY(1)}}
 @keyframes trendline-show{to{stroke-dashoffset:0;opacity:1}}
