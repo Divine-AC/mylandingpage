@@ -98,3 +98,6 @@
 2026-09-10 14:08:27 | 14,024.22 | 15,097.29 | +1,073.07 | Close long position for symbol FX:USDJPY at price 154.256 for 261084 units. Position AVG Price was 153.622000, currency: JPY, rate: 0.006483, point value: 1.000000
 2026-09-10 14:06:32 | 13,798.62 | 14,024.22 | +225.60 | Close short position for symbol OANDA:XAUUSD at price 4347.320 for 5 units. Position AVG Price was 4392.440000, currency: USD, rate: 1.000000, point value: 1.000000
 2026-09-10 14:06:27 | 13,194.05 | 13,798.62 | +604.57 | Close short position for symbol FX:EURUSD at price 1.16033 for 279895 units. Position AVG Price was 1.112490, currency: USD, rate: 1.000000, point value: 1.000000
+2026-11-20 06:47:32 | 16,636.92 | 20,102.79 | +3,465.87 | Close short position for symbol OANDA:XAUUSD at price 3533.980 for 23 units. Position AVG Price was 3684.670000, currency: USD, rate: 1.000000, point value: 1.000000
+2026-11-20 06:45:57 | 14,190.78 | 16,636.92 | +2,446.14 | Close short position for symbol FX:XAGUSD at price 41.662 for 847 units. Position AVG Price was 44.550000, currency: USD, rate: 1.000000, point value: 1.000000
+2026-11-20 06:27:26 | 13,680.48 | 14,190.78 | +510.30 | Close short position for symbol FX:EURUSD at price 1.09787 for 361917 units. Position AVG Price was 1.099280, currency: USD, rate: 1.000000, point value: 1.000000
