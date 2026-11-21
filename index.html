@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="ad.crim — Trader &amp; Market Analyst"/>
 <meta name="twitter:description" content="Gold, FX, oil and crypto. Daily trade posts on Telegram."/>
 <meta name="theme-color" content="#0b0c0f"/>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="assets/favicon.svg?v=brand-breakout" type="image/svg+xml"/>
 <link rel="stylesheet" href="styles.css?v=20261121-trading-ui"/>
 <script type="application/ld+json">
 {
@@ -44,7 +44,7 @@
 <header class="nav" id="nav">
   <div class="wrap nav-in">
     <a class="brand" href="#top" aria-label="ad.crim, home">
-      <span class="mark" aria-hidden="true">A.</span>
+      <img class="brand-symbol" src="assets/favicon.svg" width="40" height="40" alt="" aria-hidden="true"/>
       <span class="brand-t">ad.crim<em>Trader &amp; Market Analyst</em></span>
     </a>
 
@@ -156,8 +156,17 @@
       <div class="chart-note"><span class="dot" aria-hidden="true"></span>DEMO · 10 SEP–20 NOV 2026</div>
     </div>
     <figure class="chart">
-      <img src="assets/equity-curve.svg" width="1000" height="420"
-           alt="Equity curve for 102 closed trades on a demo account from September to November 2026."/>
+      <div class="equity-chart" data-equity-chart role="slider" tabindex="0"
+           aria-label="Demo account equity curve. Hover to inspect values, or use left and right arrow keys."
+           aria-valuemin="0" aria-valuemax="102" aria-valuenow="0">
+        <img src="assets/equity-curve.svg" width="1000" height="420"
+             alt="Equity curve for 102 closed trades on a demo account from September to November 2026."/>
+        <svg class="equity-overlay" viewBox="0 0 1000 420" preserveAspectRatio="none" aria-hidden="true">
+          <line class="equity-crosshair" x1="8" y1="20" x2="8" y2="386"/>
+          <circle class="equity-marker" cx="8" cy="238.89" r="5"/>
+        </svg>
+        <div class="equity-tooltip" aria-hidden="true"></div>
+      </div>
       <figcaption>Demo account results. Past performance does not guarantee future results.</figcaption>
     </figure>
     <div class="stat-grid">
