@@ -274,6 +274,16 @@ p{margin:0}
   font-size:.9rem;font-weight:750;color:var(--gold-hi);
   background:rgba(216,178,95,.1);border:1px solid rgba(216,178,95,.22);margin-bottom:18px;
 }
+.pair-icon{display:flex;align-items:center;position:relative;width:54px;height:44px;margin-bottom:18px;background:none;border:0;border-radius:0}
+.pair-badge{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;
+  border:2px solid var(--panel);font-size:.61rem;font-weight:800;letter-spacing:-.03em;
+  box-shadow:0 2px 8px rgba(0,0,0,.28)}
+.pair-badge+.pair-badge{margin-left:-9px}
+.pair-badge.metal{background:linear-gradient(145deg,#f3d486,#9a7131);color:#292116}
+.pair-badge.dollar{background:#203f35;color:#a9e0bf}
+.pair-badge.flag{font-size:1.1rem;background:#252932;line-height:1}
+.pair-badge.oil{background:linear-gradient(145deg,#a7a7a0,#414448);color:#151719;font-size:.55rem}
+.pair-badge.bitcoin{background:#e99437;color:#27180a;font-size:1rem}
 .card h3{margin-bottom:8px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;font-size:1rem}
 .card .sym{font-size:.7rem;letter-spacing:.1em;color:var(--muted);font-weight:600}
 .card p{color:var(--muted);font-size:.9rem;line-height:1.6}
