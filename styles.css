@@ -635,8 +635,18 @@ p{margin:0}
 
 /* ---------- reveal ---------- */
 
-.reveal{opacity:0;transform:translateY(10px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
-.reveal.in{opacity:1;transform:none}
+.reveal{opacity:0;transform:translateY(14px);filter:blur(2px);
+  transition:opacity .58s var(--ease),transform .58s var(--ease),filter .58s var(--ease);
+  transition-delay:var(--reveal-delay,0ms);will-change:opacity,transform}
+.reveal.in{opacity:1;transform:none;filter:none}
+.hero-copy>.reveal{transform:translateY(12px)}
+.card.reveal,.service.reveal{transform:translateY(16px) scale(.985)}
+.project.reveal{transform:translateY(18px) scale(.99)}
+.reveal.in.card,.reveal.in.service,.reveal.in.project{transform:none}
+.hero-copy>.reveal:nth-child(1){--reveal-delay:0ms}
+.hero-copy>.reveal:nth-child(2){--reveal-delay:70ms}
+.hero-copy>.reveal:nth-child(3){--reveal-delay:140ms}
+.hero-copy>.reveal:nth-child(4){--reveal-delay:210ms}
 /* stagger only inside grids, so a row animates in sequence instead of as one slab */
 .stat-grid .reveal:nth-child(2),.cards .reveal:nth-child(2),
 .service-grid .reveal:nth-child(2),.steps .reveal:nth-child(2){transition-delay:.05s}
@@ -711,7 +721,7 @@ p{margin:0}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
-    transition-duration:.001ms !important}
+    transition-duration:.001ms !important;transition-delay:0ms !important;scroll-behavior:auto !important}
   .reveal{opacity:1;transform:none}
 }
 
