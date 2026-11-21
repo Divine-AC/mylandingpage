@@ -683,11 +683,12 @@ story += [P("Read the breakdown honestly: gold and silver carried the period, EU
 
 story += [Paragraph("5.3 Three problems in the data worth fixing", S["h2"])]
 story += [numbered([
-    "<b>The 13 November row does not chain.</b> It shows a balance moving from $100,000.00 to "
-    "$102,297.18 (+$2,297.18) while every other row sits between $8,200 and $15,800. Either it is "
-    "a different account, a deposit was omitted, or the export merged two ledgers. Do not publish "
-    "a curve that jumps like that — it will be read as a fake screenshot. Confirm what that row is "
-    "before using it anywhere.",
+    "<b>The 13 November row belongs to a second account.</b> It shows a balance moving from "
+    "$100,000.00 to $102,297.18 while every other row sits between $8,200 and $15,800. It is now "
+    "resolved: that row is the <b>first trade of a separate $100,000 account</b>, held in its own "
+    "ledger. Every row in that account chains exactly (balance_before equals the previous row's "
+    "balance_after) and every profit equals price × units to the cent. The two ledgers are never "
+    "mixed into one curve.",
     f"<b>The peak-to-trough drawdown is {STATS['max_drawdown_pct']}%</b> (${STATS['max_drawdown_abs']:,.2f}) "
     "between late September and early November, including a 12-trade losing streak. Any realistic "
     "risk framework would treat that as outside tolerance. It is worth stating in your own words on "
@@ -835,7 +836,8 @@ for i, r in enumerate(curve, 1):
         style.append(("BACKGROUND", (0, i), (-1, i), BG))
 lt.setStyle(TableStyle(style))
 story += [lt, Spacer(1, 5),
-          P("* Flagged row: balance does not chain with the rest of the ledger (see section 5.3).", S["tiny"]),
+          P("* This row is the first trade of the separate $100,000 account, not part of this ledger "
+            "(see section 5.3).", S["tiny"]),
           Spacer(1, 6),
           rule(4, 6),
           P("Generated from data/trades-raw.txt by tools/analyse_trades.py and "
