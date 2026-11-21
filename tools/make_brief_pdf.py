@@ -239,7 +239,7 @@ decisions = [
     ["Primary CTA", "“Book a web development build” (services revenue)"],
     ["Secondary CTA", "“Join Telegram for daily trades” (free audience)"],
     ["Performance", "Equity curve only — no headline claims, no account-type explanation"],
-    ["Contact", "LinkedIn, email, Telegram, X and GitHub — phone number removed"],
+    ["Contact", "Email, X, Telegram, LinkedIn — phone number removed"],
     ["Tone", "Sober, plain-spoken, no hype, no guarantees"],
 ]
 dt = Table([[Paragraph(a, S["cellb"]), Paragraph(b, S["cell"])] for a, b in decisions],
@@ -430,7 +430,7 @@ copy_sections = [
         ("H2", "Let's talk."),
         ("Sub", "Software builds, civil engineering work, collaborations, or questions about the "
                 "Telegram channel — my inbox is open."),
-        ("Links", "LinkedIn /in/divine-abba-883540311 · Email · Telegram @adcrim · X @ad_crim1"),
+        ("Links", "Email · X @ad_crim1 · Telegram @adcrim · LinkedIn (recruiters)"),
     ]),
     ("2.10 Footer", [
         ("Copyright", "© 2026 Divine Abba · Abuja, Nigeria"),
@@ -580,8 +580,12 @@ story += [
     bullet([
         "Title, description, canonical, Open Graph and Twitter card all set in index.html.",
         "<font face='Courier' size='7.6'>application/ld+json</font> Person schema — name, job title, "
-        "Abuja, knowsAbout, with LinkedIn, Telegram and X as sameAs.",
+        "Abuja, knowsAbout, with X, Telegram and LinkedIn as sameAs.",
         "Semantic heading order, descriptive link text, sitemap + robots.txt included.",
+        "<b>Private files:</b> <font face='Courier' size='7.6'>.vercelignore</font> must exclude "
+        "<font face='Courier' size='7.6'>data/</font>, <font face='Courier' size='7.6'>tools/</font> "
+        "and <font face='Courier' size='7.6'>docs/</font> — without it the raw broker ledger and "
+        "this brief are publicly downloadable from the live site.",
         "<b>Before launch:</b> buy the domain, replace every "
         "<font face='Courier' size='7.6'>https://divineabba.com/</font> occurrence in index.html, "
         "sitemap.xml and robots.txt, and add a real 1200×630 OG image.",
@@ -756,7 +760,7 @@ story += [
 story += [Spacer(1, 6), Paragraph("7 · Launch checklist", S["h1"]), rule(0, 9)]
 checks = [
     ("Content", "Telegram link is a real invite link and opens on mobile"),
-    ("Content", "Contact shows LinkedIn, email, Telegram, X, GitHub — no phone number"),
+    ("Content", "Contact shows email, X, Telegram, LinkedIn — no phone number"),
     ("Content", "Portrait is your final chosen shot; delete the unused crops"),
     ("Content", "The 13 Nov ledger row either explained or removed from the chart"),
     ("Content", "Read every line of the copy out loud — cut anything you would not say"),

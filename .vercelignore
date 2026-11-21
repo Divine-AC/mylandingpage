@@ -1,0 +1,10 @@
+# Nothing in these directories is needed to serve the page.
+# Without this file Vercel publishes the whole repo, which makes the raw
+# broker ledger, the internal brief PDF and the analysis scripts publicly
+# downloadable from the live URL.
+
+data/
+tools/
+docs/
+README.md
+.vercelignore
