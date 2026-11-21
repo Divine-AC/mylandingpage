@@ -491,7 +491,7 @@ p{margin:0}
 /* 12 cells divide exactly into 4x3 — auto-fit produced 6 columns on desktop
    (cramped) or a ragged 5+5+2, so the column count is set explicitly. */
 .stat-grid{
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
   gap:1px;margin-top:24px;background:var(--line-soft);
   border:1px solid var(--line-soft);border-radius:14px;overflow:hidden;
 }
