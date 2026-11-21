@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380"
+     role="img" aria-label="Risk ladder on a 100,000 dollar account: after three consecutive losses, 1% risk loses 3.0%, 2% loses 5.9%, 3% loses 8.7% and 5% loses 14.3%, which crosses a 10% drawdown limit.">
+<defs>
+  <linearGradient id="gprev" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#4b4636"/>
+    <stop offset="100%" stop-color="#2a2822"/>
+  </linearGradient>
+  <linearGradient id="gcur" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e6c574" stop-opacity="0.92"/>
+    <stop offset="100%" stop-color="#8f7a45" stop-opacity="0.55"/>
+  </linearGradient>
+  <style>
+    .ax{font:11px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#8b8f98;letter-spacing:.03em}
+    .val{font:700 15px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#f2f1ee}
+    .sub{font:11px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#c3c6cd}
+    .lvl{font:700 12.5px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#f2f1ee}
+    .rec{font:11px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#8b8f98}
+    .tag{font:10px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#6d717a;letter-spacing:.1em;text-transform:uppercase}
+    .tag.cur{fill:#e6c574}
+    .warntxt{font:10.5px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#e0736a;letter-spacing:.04em}
+    .hdr{font:10.5px ui-sans-serif,system-ui,-apple-system,sans-serif;fill:#8b8f98;letter-spacing:.12em;text-transform:uppercase}
+  </style>
+</defs>
+<text x="14" y="18" class="hdr">$100,000 account · loss after 3 consecutive losing trades</text>
+<text x="986" y="18" text-anchor="end" class="hdr">risk per trade</text>
+<line x1="14" y1="316.00" x2="986" y2="316.00" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="10" y="310.00" class="ax">0%</text><line x1="14" y1="248.50" x2="986" y2="248.50" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="10" y="242.50" class="ax">5%</text><line x1="14" y1="181.00" x2="986" y2="181.00" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="10" y="175.00" class="ax">10%</text><line x1="14" y1="113.50" x2="986" y2="113.50" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="10" y="107.50" class="ax">15%</text><line x1="14" y1="46.00" x2="986" y2="46.00" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="10" y="40.00" class="ax">20%</text>
+<line x1="14" y1="181.00" x2="986" y2="181.00" stroke="#e0736a" stroke-opacity="0.55" stroke-width="1.4" stroke-dasharray="5 5"/><text x="986" y="174.00" text-anchor="end" class="warntxt">10% — where most funded-account rules stop you</text>
+<rect x="84.47" y="275.90" width="102.06" height="40.10" rx="5" fill="url(#gprev)" stroke="rgba(216,178,95,.35)" stroke-width="1"/><text x="135.50" y="263.90" text-anchor="middle" class="val">−3.0%</text><text x="135.50" y="248.90" text-anchor="middle" class="sub">$1,000 risked / trade</text><text x="135.50" y="338.00" text-anchor="middle" class="lvl">1% per trade</text><text x="135.50" y="354.00" text-anchor="middle" class="rec">needs +3.1% to recover</text><text x="135.50" y="370.00" text-anchor="middle" class="tag">earlier</text><rect x="327.47" y="236.61" width="102.06" height="79.39" rx="5" fill="url(#gprev)" stroke="rgba(216,178,95,.35)" stroke-width="1"/><text x="378.50" y="224.61" text-anchor="middle" class="val">−5.9%</text><text x="378.50" y="209.61" text-anchor="middle" class="sub">$2,000 risked / trade</text><text x="378.50" y="338.00" text-anchor="middle" class="lvl">2% per trade</text><text x="378.50" y="354.00" text-anchor="middle" class="rec">needs +6.2% to recover</text><text x="378.50" y="370.00" text-anchor="middle" class="tag">earlier</text><rect x="570.47" y="198.11" width="102.06" height="117.89" rx="5" fill="url(#gprev)" stroke="rgba(216,178,95,.35)" stroke-width="1"/><text x="621.50" y="186.11" text-anchor="middle" class="val">−8.7%</text><text x="621.50" y="171.11" text-anchor="middle" class="sub">$3,000 risked / trade</text><text x="621.50" y="338.00" text-anchor="middle" class="lvl">3% per trade</text><text x="621.50" y="354.00" text-anchor="middle" class="rec">needs +9.6% to recover</text><text x="621.50" y="370.00" text-anchor="middle" class="tag">earlier</text><rect x="813.47" y="123.46" width="102.06" height="192.54" rx="5" fill="url(#gcur)" stroke="#e6c574" stroke-width="1"/><text x="864.50" y="111.46" text-anchor="middle" class="val">−14.3%</text><text x="864.50" y="96.46" text-anchor="middle" class="sub">$5,000 risked / trade</text><text x="864.50" y="338.00" text-anchor="middle" class="lvl">5% per trade</text><text x="864.50" y="354.00" text-anchor="middle" class="rec">needs +16.6% to recover</text><text x="864.50" y="370.00" text-anchor="middle" class="tag cur">current</text>
+</svg>
