@@ -38,6 +38,7 @@ Projects: `propfirmintelligenence.vercel.app`, `divine-banking-web-app.vercel.ap
 | `data/stats.json` | Computed statistics (generated) |
 | `tools/analyse_trades.py` | Parses the ledger, verifies every row, writes the JSON |
 | `tools/make_chart.py` | Regenerates `assets/equity-curve.svg` from the data |
+| `tools/make_risk_chart.py` | Regenerates `assets/risk-ladder.svg` (risk per trade on a $100k account) |
 | `tools/make_brief_pdf.py` | Regenerates the 14-page brief PDF |
 | `docs/Divine-Abba-Landing-Page-Brief.pdf` | **The deliverable brief** — strategy, full copy deck, design system, technical spec, ledger audit, compliance wording, launch checklist, full trade table |
 

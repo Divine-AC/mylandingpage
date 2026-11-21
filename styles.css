@@ -381,6 +381,18 @@ p{margin:0}
 .tn p{font-size:.85rem;color:var(--muted);line-height:1.6}
 .tn strong{color:var(--ink)}
 
+/* ---------- risk ladder ---------- */
+
+.risk-block{margin-top:34px}
+.risk-head h3{font-size:clamp(1.05rem,2vw,1.3rem);margin-bottom:12px;letter-spacing:-.02em}
+.risk-head .sub{max-width:70ch}
+.chart-sm{margin-top:22px}
+.chart-sm img{max-width:100%}
+
+@media (max-width:640px){
+  .chart-sm{padding:10px}
+}
+
 /* ---------- linkedin band ---------- */
 
 .linkedin-band .li-in{
