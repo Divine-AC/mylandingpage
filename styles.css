@@ -393,6 +393,26 @@ p{margin:0}
   .chart-sm{padding:10px}
 }
 
+/* ---------- 100k stats grid ---------- */
+
+.stat-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));
+  gap:1px;margin-top:22px;background:var(--line-soft);
+  border:1px solid var(--line-soft);border-radius:12px;overflow:hidden;
+}
+.stat{background:var(--panel);padding:16px 16px 15px;display:flex;flex-direction:column;gap:3px}
+.stat-k{font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.stat strong{font-size:1.12rem;letter-spacing:-.02em;line-height:1.2}
+.stat strong.up{color:#6fd0a0}
+.stat strong.down{color:#e5928a}
+.stat-n{font-size:.72rem;color:var(--muted);line-height:1.4}
+
+@media (max-width:640px){
+  .stat-grid{grid-template-columns:1fr 1fr}
+  .stat{padding:13px 13px 12px}
+  .stat strong{font-size:1rem}
+}
+
 /* ---------- linkedin band ---------- */
 
 .linkedin-band .li-in{

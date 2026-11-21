@@ -216,24 +216,95 @@
     <div class="risk-block">
       <div class="risk-head">
         <div>
-          <p class="kicker">Position sizing</p>
-          <h3>What risk per trade actually costs you.</h3>
+          <p class="kicker">Same record, $100,000 basis</p>
+          <h3>What these trades look like on a six-figure account.</h3>
           <p class="sub">
-            I've sized positions at <strong>1%</strong>, then <strong>2%</strong>, then
-            <strong>3%</strong> per trade, and I'm at <strong>5%</strong> now. On a $100,000 account
-            that's $5,000 at risk on every idea — which is fine while it works and brutal over a
-            losing run. This is the arithmetic I keep in front of me:
+            The account above started at <strong>$13,194.05</strong>, which makes the dollar figures
+            hard to compare. Below is the identical trade sequence rebased to a
+            <strong>$100,000</strong> starting balance — every trade scaled by the same factor, so
+            the shape of the curve, the win rate and the profit factor are unchanged. Only the
+            currency amounts differ.
           </p>
         </div>
       </div>
+
       <figure class="chart chart-sm">
-        <img src="assets/risk-ladder.svg" width="1000" height="380"
-             alt="Bar chart of risk on a 100,000 dollar account: three consecutive losses cost 3.0% at 1% risk per trade, 5.9% at 2%, 8.7% at 3% and 14.3% at 5%, with the 5% bar crossing a 10% drawdown line."/>
+        <img src="assets/equity-100k.svg" width="1000" height="420"
+             alt="Equity curve of 102 closed trades scaled to a 100,000 dollar starting balance, rising from 100,000 to 152,363 dollars with a maximum drawdown of about 46,700 dollars."/>
         <figcaption>
-          A $100,000 account, compounded, after three consecutive losses. At 5% per trade the third
-          loss crosses 10% and you need +16.6% to get back to where you started.
+          Rebased to $100,000. Multiplier applied: &times;7.579.
         </figcaption>
       </figure>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <span class="stat-k">Starting balance</span>
+          <strong>$100,000</strong>
+          <span class="stat-n">actual: $13,194</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Closing balance</span>
+          <strong>$152,363</strong>
+          <span class="stat-n">actual: $20,103</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Net result</span>
+          <strong class="up">+$52,363</strong>
+          <span class="stat-n">+52.4% over the period</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Closed trades</span>
+          <strong>102</strong>
+          <span class="stat-n">10 Sep – 20 Nov 2026</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Win rate</span>
+          <strong>36.3%</strong>
+          <span class="stat-n">37 wins / 63 losses / 2 flat</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Profit factor</span>
+          <strong>1.35</strong>
+          <span class="stat-n">$26,791 won per $19,882 lost</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Average win</span>
+          <strong class="up">+$5,488</strong>
+          <span class="stat-n">per winning trade</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Average loss</span>
+          <strong class="down">−$2,392</strong>
+          <span class="stat-n">per losing trade</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Expectancy</span>
+          <strong class="up">+$513</strong>
+          <span class="stat-n">average per trade</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Largest win</span>
+          <strong class="up">+$26,268</strong>
+          <span class="stat-n">gold short, 20 Nov</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Largest loss</span>
+          <strong class="down">−$9,311</strong>
+          <span class="stat-n">EUR/USD, 11 Nov</span>
+        </div>
+        <div class="stat">
+          <span class="stat-k">Max drawdown</span>
+          <strong class="down">−$46,673</strong>
+          <span class="stat-n">30.6% from peak</span>
+        </div>
+      </div>
+
+      <p class="fineprint">
+        Rebased figures multiply every trade by 7.579 (100,000 ÷ 13,194.05). They describe the same
+        sequence of trades, not a different result, and they are not a claim that a $100,000 account
+        would have filled at the same prices or sizes — position sizing, spreads and slippage all
+        change at that scale.
+      </p>
     </div>
 
     <p class="fineprint">

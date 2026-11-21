@@ -1,0 +1,26 @@
+{
+ "factor": 7.579174,
+ "source_start": 13194.05,
+ "source_end": 20102.79,
+ "start": 100000.0,
+ "end": 152362.54,
+ "net": 52362.54,
+ "return_pct": 52.36,
+ "peak": 152362.54,
+ "max_drawdown": 46673.24,
+ "max_drawdown_pct": 30.63,
+ "trades": 102,
+ "wins": 37,
+ "losses": 63,
+ "win_rate": 36.3,
+ "profit_factor": 1.35,
+ "avg_win": 5487.96,
+ "avg_loss": -2391.94,
+ "largest_win": 26268.43,
+ "largest_loss": -9311.09,
+ "expectancy": 513.36,
+ "period": {
+  "from": "2026-09-10",
+  "to": "2026-11-20"
+ }
+}
