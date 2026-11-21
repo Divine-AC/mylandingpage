@@ -43,10 +43,11 @@
       document.querySelectorAll("[data-tg]").forEach(function (a) {
         a.href = SITE.telegram;
       });
-      // derive a readable handle, e.g. https://t.me/adcrim -> @adcrim
-      var handle = (SITE.telegram.split("/").filter(Boolean).pop() || "").replace(/^\+/, "");
-      var label = handle.charAt(0) === "+" || handle.length > 24
-        ? "Daily trade posts"
+      // Use a clear label for invite links instead of showing the invite token.
+      var slug = (SITE.telegram.split("/").filter(Boolean).pop() || "");
+      var handle = slug.replace(/^\+/, "");
+      var label = slug.charAt(0) === "+"
+        ? "Private Telegram invite"
         : "@" + handle + " — daily trade posts";
       document.querySelectorAll("[data-tg-text]").forEach(function (el) {
         el.textContent = label;
