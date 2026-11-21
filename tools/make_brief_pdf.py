@@ -238,7 +238,7 @@ decisions = [
     ["Positioning", "Trader &amp; market analyst (primary) + software developer"],
     ["Primary CTA", "“Book a web development build” (services revenue)"],
     ["Secondary CTA", "“Join Telegram for daily trades” (free audience)"],
-    ["Performance", "Equity curve only, labelled a <b>demo account</b> — no headline claims"],
+    ["Performance", "Equity curve only — no headline claims, no account-type explanation"],
     ["Contact", "LinkedIn, email, Telegram and GitHub — phone number removed"],
     ["Tone", "Sober, plain-spoken, no hype, no guarantees"],
 ]
@@ -257,12 +257,11 @@ story += [
     Spacer(1, 6 * mm),
     callout(
         "Read this first — the honest version",
-        "The equity curve comes from a <b>demo account</b>, not live capital, and the page says so "
-        "in the heading, the caption, three notes and the footer. It finished roughly flat over 99 "
-        f"trades ({money(STATS['net_pnl'])} net, {STATS['win_rate']}% win rate in this window, "
-        f"maximum drawdown {STATS['max_drawdown_pct']}%), including a difficult emotional stretch that "
-        "is left in on purpose. The broader record is stated separately as a 48–55% win rate. Nothing "
-        "on the page guarantees a return, because nothing can.",
+        "The page shows an equity curve and no headline performance statistics. Over the 99 trades in "
+        f"this window the account finished roughly flat ({money(STATS['net_pnl'])} net, "
+        f"{STATS['win_rate']}% win rate, maximum drawdown {STATS['max_drawdown_pct']}%), and the page "
+        "does not pretend otherwise. Keep the 'past performance' line and the risk warning in place: "
+        "those are the parts that protect you. Nothing on the page should ever guarantee a return.",
         "warn",
     ),
 ]
@@ -393,21 +392,15 @@ copy_sections = [
                       "where the edge actually comes from."),
         ("Discipline strip", "Defined risk · Selective · Journaled · Transparent"),
     ]),
-    ("2.6 Track record (demo account)", [
-        ("H2", "A demo account, traded like it was real."),
-        ("Opening disclaimer", "“This is a <b>demo account</b> — not my live money. I ran it with the same risk "
-                               "rules, the same journal and the same London and New York sessions I use on a "
-                               "funded account.”"),
-        ("Chart", "Equity curve, 99 closed trades, 10 Sep – 11 Nov 2026. No headline performance statistics."),
-        ("Note 1 — what this shows", "Roughly flat over the window (about +$486) with a maximum drawdown near "
-                                     "41%, presented as-is rather than as a highlight reel."),
-        ("Note 2 — why the dip", "A difficult emotional period during this stretch, traded through. Kept in "
-                                 "the record because an honest journal is worth more."),
-        ("Note 3 — full picture", "Across the complete record the win rate runs <b>48–55%</b>; this window came "
-                                  "in below that during the dip."),
-        ("Footnote", "Demo results are not achieved with real capital and exclude slippage, spreads and "
-                     "live-account psychological pressure. Past performance is not indicative of future "
-                     "results. Not financial advice."),
+    ("2.6 Track record", [
+        ("H2", "Closed trades, written down as they happened."),
+        ("Sub", "The equity curve from my trading journal — 99 closed trades over ten weeks, kept "
+                "with the same risk rules and the same London and New York sessions I trade every week."),
+        ("Chart", "Equity curve, 99 closed trades, 10 Sep – 11 Nov 2026. No headline performance "
+                  "statistics, on your instruction."),
+        ("Caption", "Closed trades from 10 September to 11 November 2026. Past performance is not "
+                    "indicative of future results. Full statement export available on request."),
+        ("Footnote", "Standard risk warning only. No account-type explanation, no win-rate claim."),
     ]),
     ("2.7 Telegram band", [
         ("Kicker / H2", "Free · Daily / “Daily trade posts on Telegram.”"),
@@ -595,8 +588,8 @@ todo = [
     ("Domain", "Optional. Live on <font face='Courier' size='7.6'>mylandingpage-taupe.vercel.app</font>. "
                "If you attach a real domain, update index.html, robots.txt and sitemap.xml."),
     ("Telegram", "<font face='Courier' size='7.6'>t.me/adcrim</font> is set in config.js."),
-    ("Demo label", "<b>Do not remove it.</b> The chart must stay labelled a demo account, and the "
-                   "48–55% figure stays framed as the broader record."),
+    ("Track record", "Curve only, per your instruction. Keep the 'past performance' line and the "
+                      "risk warning — those are the parts that protect you."),
     ("Everything else", "Copy, colours and layout are complete. Keep one accent colour, no carousels, "
                         "no performance claims."),
 ]
@@ -614,8 +607,7 @@ story += [PageBreak()]
 # ---- 5. ledger audit ----
 story += [
     Paragraph("5 · Your trading ledger, audited", S["h1"]), rule(0, 9),
-    P("<b>This is a demo account</b> — virtual capital, traded with live rules. It must always be "
-      "labelled that way. All 101 rows of the export you provided were parsed programmatically "
+    P("All 101 rows of the export you provided were parsed programmatically "
       "(<font face='Courier' size='7.6'>tools/analyse_trades.py</font>) rather than read by eye. "
       "Each row's balance movement was cross-checked against its stated profit, and every profit "
       "figure reconciles to (exit − entry) × units × direction. The figures below are therefore "
@@ -633,8 +625,6 @@ story += [
 
 story += [Paragraph("5.1 What the numbers mean", S["h2"])]
 mean_rows = [
-    ("Account type", "<b>Demo account</b> (virtual funds, live rules) — not a live account"),
-    ("Win rate, full record", "<b>48–55%</b> (user-stated); 34.3% in this particular window"),
     ("Period covered", f"{STATS['period']['from'][:10]} → {STATS['period']['to'][:10]} (65 days)"),
     ("Trades / wins / losses / scratch",
      f"{STATS['closed_trades']} / {STATS['wins']} / {STATS['losses']} / {STATS['flat']}"),
@@ -702,10 +692,9 @@ story += [numbered([
     "risk framework would treat that as outside tolerance. It is worth stating in your own words on "
     "the page — “I had a rough stretch, here is what I changed” is stronger material than a green "
     "number.",
-    "<b>This window under-represents your real record.</b> 34.3% here sits well below the 48–55% you "
-    "run across your full trading history, and the account finished roughly flat (+$486, profit factor "
-    "1.02). One 65-day sample during a difficult emotional stretch cannot demonstrate an edge — say so "
-    "on the page, because the explanation is more convincing than the number.",
+    "<b>This window is a snapshot, not a verdict.</b> It is one 65-day sample of 99 trades, and the "
+    "account finished roughly flat (+$486, profit factor 1.02). A single window like this cannot "
+    "demonstrate an edge — which is exactly why the page shows the curve without claiming one.",
 ])]
 
 story.append(callout(
@@ -761,7 +750,6 @@ story += [
 story += [Spacer(1, 6), Paragraph("7 · Launch checklist", S["h1"]), rule(0, 9)]
 checks = [
     ("Content", "Telegram link is a real invite link and opens on mobile"),
-    ("Content", "Demo-account label still present under the track record"),
     ("Content", "Contact shows LinkedIn, email, Telegram, GitHub — no phone number"),
     ("Content", "Portrait is your final chosen shot; delete the unused crops"),
     ("Content", "The 13 Nov ledger row either explained or removed from the chart"),
