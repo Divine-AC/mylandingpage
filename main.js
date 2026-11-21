@@ -156,11 +156,20 @@
     // wrap ".sec .wrap > *" — that hid the h2 and lede of every section until a
     // scroll event fired, which looks broken on slow devices and hurts SEO.
     var targets = document.querySelectorAll(
-      ".card, .steps li, .discipline div, .chart, .band, .link-card, .project, " +
-      ".work-foot, .services, .stat-grid, .risk-block"
+      ".hero-copy > *, .market-visual, .sec > .wrap > .kicker, .sec > .wrap > h2, " +
+      ".sec > .wrap > .sub, .sec > .wrap > .markets-intro, .card, .steps li, " +
+      ".discipline div, .chart, .band, .band-list li, .link-card, .project, " +
+      ".work-foot, .services, .service, .stat-grid, .risk-block, .prose > *, " +
+      ".chip-row, .foot-in > *"
     );
 
-    targets.forEach(function (el) { el.classList.add("reveal"); });
+    targets.forEach(function (el) {
+      el.classList.add("reveal");
+      var group = el.closest(".sec") || document.body;
+      var count = Number(group.getAttribute("data-reveal-count") || 0);
+      el.style.setProperty("--reveal-delay", Math.min(count, 5) * 55 + "ms");
+      group.setAttribute("data-reveal-count", String(count + 1));
+    });
 
     var io = new IntersectionObserver(
       function (entries) {
