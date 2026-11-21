@@ -335,26 +335,9 @@ p{margin:0}
 .equity-chart.has-point .equity-tooltip{opacity:1;visibility:visible}
 .chart.reveal.in .equity-chart img{animation:curve-reveal 1.35s var(--ease) both}
 @keyframes curve-reveal{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
-.market-visual.is-animated .candle{transform-box:fill-box;transform-origin:center bottom;
-  animation:candle-enter .58s var(--ease) both}
-.market-visual.is-animated .candle:nth-of-type(1){animation-delay:.04s}
-.market-visual.is-animated .candle:nth-of-type(2){animation-delay:.1s}
-.market-visual.is-animated .candle:nth-of-type(3){animation-delay:.16s}
-.market-visual.is-animated .candle:nth-of-type(4){animation-delay:.22s}
-.market-visual.is-animated .candle:nth-of-type(5){animation-delay:.28s}
-.market-visual.is-animated .candle:nth-of-type(6){animation-delay:.34s}
-.market-visual.is-animated .candle:nth-of-type(7){animation-delay:.4s}
-.market-visual.is-animated .candle:nth-of-type(8){animation-delay:.46s}
-.market-visual.is-animated .candle:nth-of-type(9){animation-delay:.52s}
-.market-visual.is-animated .candle:nth-of-type(10){animation-delay:.58s}
-.market-visual.is-animated .candle:nth-of-type(11){animation-delay:.64s}
-.market-visual.is-animated .candle:nth-of-type(12){animation-delay:.7s}
-.market-visual.is-animated .market-level{animation:level-draw .9s .7s ease both}
-@keyframes candle-enter{from{opacity:.2;transform:scaleY(.18)}to{opacity:1;transform:scaleY(1)}}
-@keyframes level-draw{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){
-  .market-visual.is-animated .candle,.market-visual.is-animated .market-level,.chart.reveal.in .equity-chart img{
-    animation:none!important;clip-path:none!important}
+  .market-visual-top i{animation:none!important}
+  .chart.reveal.in .equity-chart img{animation:none!important;clip-path:none!important}
 }
 .chart figcaption{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft);
   font-size:.79rem;color:var(--muted)}
@@ -746,14 +729,16 @@ p{margin:0}
 .market-visual-title>b{font-size:.55rem;letter-spacing:.1em;color:var(--ink-2)}
 .market-chart{position:relative;border:1px solid rgba(255,255,255,.06);border-radius:11px;background:#101114;padding:6px}
 .market-chart.live-chart{height:320px;padding:0;overflow:hidden}
-.live-chart .tradingview-widget-container,.live-chart .tradingview-widget-container__widget{height:100%;width:100%}
+.live-chart .tradingview-widget-container{height:100%;width:100%}
+.live-chart .tradingview-widget-container__widget{height:calc(100% - 20px);width:100%}
 .live-chart .tradingview-widget-copyright{height:20px;display:flex;justify-content:center;gap:4px;align-items:center;
   color:var(--muted);font-size:9px;white-space:nowrap;background:#101114}
 .live-chart .tradingview-widget-copyright a{color:var(--ink-2)}
 .chart-loading{height:100%;min-height:270px;display:grid;place-items:center;color:var(--muted);font-size:.82rem}
 .market-visual-foot{gap:7px;padding-top:13px}
-.market-visual-foot span{flex:1;text-align:center;border:1px solid rgba(255,255,255,.06);border-radius:7px;padding:8px 4px;color:var(--ink-2);font-size:.58rem;letter-spacing:.02em}
-.market-visual-foot span:last-child{color:var(--gold-hi)}
+.market-visual-foot span,.market-visual-foot a{flex:1;text-align:center;border:1px solid rgba(255,255,255,.06);border-radius:7px;padding:8px 4px;color:var(--ink-2);font-size:.58rem;letter-spacing:.02em}
+.market-visual-foot a{color:var(--gold-hi);transition:background .2s,color .2s,border-color .2s}
+.market-visual-foot a:hover{background:rgba(216,178,95,.08);border-color:rgba(216,178,95,.35);color:#f0d79a}
 .market-visual-top i{animation:live-pulse 2s ease-in-out infinite}
 @keyframes live-pulse{0%,100%{box-shadow:0 0 0 0 rgba(226,184,94,.3)}50%{box-shadow:0 0 0 5px rgba(226,184,94,0)}}
 .hero-facts{margin-top:30px}
