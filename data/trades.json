@@ -1598,5 +1598,53 @@
   "direction": -1,
   "price_pnl": 2297.18,
   "notional": 82390.92
+ },
+ {
+  "time": "2026-11-20 06:27:26",
+  "balance_before": 13680.48,
+  "balance_after": 14190.78,
+  "profit": 510.3,
+  "side": "short",
+  "symbol": "FX:EURUSD",
+  "venue": "FX",
+  "ticker": "EURUSD",
+  "units": 361917.0,
+  "entry": 1.09928,
+  "exit": 1.09787,
+  "direction": -1,
+  "price_pnl": 510.3,
+  "notional": 397848.12
+ },
+ {
+  "time": "2026-11-20 06:45:57",
+  "balance_before": 14190.78,
+  "balance_after": 16636.92,
+  "profit": 2446.14,
+  "side": "short",
+  "symbol": "FX:XAGUSD",
+  "venue": "FX",
+  "ticker": "XAGUSD",
+  "units": 847.0,
+  "entry": 44.55,
+  "exit": 41.662,
+  "direction": -1,
+  "price_pnl": 2446.14,
+  "notional": 37733.85
+ },
+ {
+  "time": "2026-11-20 06:47:32",
+  "balance_before": 16636.92,
+  "balance_after": 20102.79,
+  "profit": 3465.87,
+  "side": "short",
+  "symbol": "OANDA:XAUUSD",
+  "venue": "OANDA",
+  "ticker": "XAUUSD",
+  "units": 23.0,
+  "entry": 3684.67,
+  "exit": 3533.98,
+  "direction": -1,
+  "price_pnl": 3465.87,
+  "notional": 84747.41
  }
 ]

@@ -22,7 +22,7 @@ Built as plain HTML + CSS + JS: **no framework, no build step, no dependencies.*
 
 ### Sections (in order)
 
-Hero → Markets (6 instruments) → Method (4 steps) → **Track record (demo account)** →
+Hero → Markets (6 instruments) → Method (4 steps) → **Track record (equity curve)** →
 Telegram → **Selected work (4 live apps)** → About → LinkedIn band → Contact.
 On mobile there is a hamburger menu and a sticky "Daily trades / Hire me" bar at the bottom.
 

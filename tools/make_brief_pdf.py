@@ -257,9 +257,9 @@ story += [
     Spacer(1, 6 * mm),
     callout(
         "Read this first — the honest version",
-        "The page shows an equity curve and no headline performance statistics. Over the 99 trades in "
-        f"this window the account finished roughly flat ({money(STATS['net_pnl'])} net, "
-        f"{STATS['win_rate']}% win rate, maximum drawdown {STATS['max_drawdown_pct']}%), and the page "
+        f"The page shows an equity curve and no headline performance statistics. Over the {STATS['closed_trades']} trades in "
+        f"this window the account moved {money(STATS['net_pnl'])} net "
+        f"({STATS['win_rate']}% win rate, maximum drawdown {STATS['max_drawdown_pct']}%), and the page "
         "does not pretend otherwise. Keep the 'past performance' line and the risk warning in place: "
         "those are the parts that protect you. Nothing on the page should ever guarantee a return.",
         "warn",
@@ -394,11 +394,12 @@ copy_sections = [
     ]),
     ("2.6 Track record", [
         ("H2", "Closed trades, written down as they happened."),
-        ("Sub", "The equity curve from my trading journal — 99 closed trades over ten weeks, kept "
+        ("Sub", "The equity curve from my trading journal — 102 closed trades from September to late "
+                "November, kept "
                 "with the same risk rules and the same London and New York sessions I trade every week."),
-        ("Chart", "Equity curve, 99 closed trades, 10 Sep – 11 Nov 2026. No headline performance "
+        ("Chart", "Equity curve, 102 closed trades, 10 Sep – 20 Nov 2026. No headline performance "
                   "statistics, on your instruction."),
-        ("Caption", "Closed trades from 10 September to 11 November 2026. Past performance is not "
+        ("Caption", "Closed trades from 10 September to 20 November 2026. Past performance is not "
                     "indicative of future results. Full statement export available on request."),
         ("Footnote", "Standard risk warning only. No account-type explanation, no win-rate claim."),
     ]),
@@ -692,8 +693,8 @@ story += [numbered([
     "risk framework would treat that as outside tolerance. It is worth stating in your own words on "
     "the page — “I had a rough stretch, here is what I changed” is stronger material than a green "
     "number.",
-    "<b>This window is a snapshot, not a verdict.</b> It is one 65-day sample of 99 trades, and the "
-    "account finished roughly flat (+$486, profit factor 1.02). A single window like this cannot "
+    "<b>This window is a snapshot, not a verdict.</b> It is one ~10-week sample of 102 trades. A "
+    "single window like this cannot "
     "demonstrate an edge — which is exactly why the page shows the curve without claiming one.",
 ])]
 
