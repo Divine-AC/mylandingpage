@@ -149,10 +149,15 @@
 
   function initReveal() {
     var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var targets = document.querySelectorAll(
-      ".sec .wrap > *, .card, .steps li, .discipline div, .chart, .band, .link-card, .project, .work-foot"
-    );
     if (reduce || !("IntersectionObserver" in window)) return;
+
+    // Reveal the blocks that carry the page's rhythm. We deliberately do NOT
+    // wrap ".sec .wrap > *" — that hid the h2 and lede of every section until a
+    // scroll event fired, which looks broken on slow devices and hurts SEO.
+    var targets = document.querySelectorAll(
+      ".card, .steps li, .discipline div, .chart, .band, .link-card, .project, " +
+      ".work-foot, .services, .stat-grid, .risk-block"
+    );
 
     targets.forEach(function (el) { el.classList.add("reveal"); });
 
