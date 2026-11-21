@@ -290,7 +290,8 @@
     var pauseButton = replay.querySelector("[data-replay-pause]");
     var replayButton = replay.querySelector("[data-replay-again]");
     var status = replay.querySelector("[data-replay-status]");
-    var lastCandle = chart.querySelector(".candle:last-of-type");
+    var replayMarker = chart.querySelector(".market-level-label");
+    var observer = null;
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var hasPlayed = false;
 
@@ -306,6 +307,7 @@
         status.textContent = "Static preview · reduced-motion setting";
         return;
       }
+      if (observer) observer.disconnect();
       if (!restart && replay.classList.contains("is-playing") && replay.classList.contains("is-paused")) {
         replay.classList.remove("is-paused");
         status.textContent = "Replay resumed · Illustrative, not live data";
@@ -348,8 +350,8 @@
     playButton.addEventListener("click", function () { startReplay(false); });
     pauseButton.addEventListener("click", pauseReplay);
     replayButton.addEventListener("click", function () { startReplay(true); });
-    lastCandle.addEventListener("animationend", function (event) {
-      if (event.animationName !== "candle-print") return;
+    replayMarker.addEventListener("animationend", function (event) {
+      if (event.animationName !== "label-show") return;
       if (replay.classList.contains("is-paused")) return;
       finishReplay();
     });
@@ -369,7 +371,7 @@
       startReplay(false);
       return;
     }
-    var observer = new IntersectionObserver(function (entries) {
+    observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting || hasPlayed) return;
         startReplay(false);
