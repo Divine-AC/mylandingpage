@@ -280,25 +280,6 @@
     });
   }
 
-  /* ---------- market chart motion ---------- */
-
-  function initMarketMotion() {
-    var visual = document.querySelector(".market-visual");
-    if (!visual || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    if (!("IntersectionObserver" in window)) {
-      visual.classList.add("is-animated");
-      return;
-    }
-    var observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        visual.classList.add("is-animated");
-        observer.disconnect();
-      });
-    }, { threshold: 0.25 });
-    observer.observe(visual);
-  }
-
   /* ---------- current year ---------- */
 
   function initYear() {
@@ -313,7 +294,6 @@
     initActiveLink();
     initReveal();
     initEquityChart();
-    initMarketMotion();
     initYear();
   }
 
