@@ -1,3 +1,10 @@
 User-agent: *
 Allow: /
+
+# Keep the underlying data out of search indexes as a second line of defence.
+# The primary fix is .vercelignore, which stops these being deployed at all.
+Disallow: /data/
+Disallow: /tools/
+Disallow: /docs/
+
 Sitemap: https://divineabba.com/sitemap.xml

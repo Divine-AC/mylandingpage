@@ -15,7 +15,7 @@ Built as plain HTML + CSS + JS: **no framework, no build step, no dependencies.*
 | `index.html` | The landing page — all markup and copy |
 | `styles.css` | All styling (one file, one request) |
 | `main.js` | Contact-link wiring, hero ticker, scroll reveal, year |
-| `config.js` | **The only file you edit** — Telegram, email, LinkedIn, X |
+| `config.js` | **The only file you edit** — Telegram, email, X, LinkedIn |
 | `assets/divine-hero.jpg` | Portrait, 600×960 |
 | `assets/equity-curve.svg` | Generated equity-curve chart (~5 KB, sharp on retina) |
 | `assets/favicon.svg` | "DA" monogram favicon |
@@ -45,9 +45,20 @@ deliberately a services block, not a CV — there is no timeline and no employme
 
 ### Contact links
 
-Telegram, email, LinkedIn and X are all driven from `config.js` and written into the markup at
-runtime by `main.js` (`data-tg`, `data-email`, `data-linkedin`, `data-x`). To change any of them,
-edit `config.js` only. X is `https://x.com/ad_crim1`.
+Telegram, email, X and LinkedIn are all driven from `config.js` and written into the markup at
+runtime by `main.js` (`data-tg`, `data-email`, `data-x`, `data-linkedin`). To change any of them,
+edit `config.js` only.
+
+**X is the primary follow-along channel** (`https://x.com/ad_crim1`) — it owns the band near the
+bottom of the page. LinkedIn is kept only as a recruiter reference (contact list and footer); the
+page does **not** claim you post there.
+
+### ⚠️ `.vercelignore` — do not delete
+
+The site is served as a static directory, so **everything committed to the repo is published**.
+`.vercelignore` excludes `data/`, `tools/`, `docs/` and this README so the raw broker ledger, the
+internal brief PDF and the analysis scripts are never downloadable from the live URL. `robots.txt`
+also disallows those paths as a second layer. If you add another private folder, add it here too.
 | `data/trades-raw.txt` | The broker ledger export, one line per trade |
 | `data/trades.json` | Parsed + verified trades (generated) |
 | `data/stats.json` | Computed statistics (generated) |
