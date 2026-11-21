@@ -6,7 +6,7 @@
 
 window.SITE = {
   // Private Telegram invite link
-  telegram: "https://t.me/+1pmbS7P2cg41YjBk",
+  telegram: "https://t.me/+iM13zTFy-0BhMGY0",
 
   // Email address used by the contact card and the mailto: link
   email: "divineabbachimdirim1@gmail.com",
