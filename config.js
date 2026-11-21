@@ -5,8 +5,8 @@
    ============================================================ */
 
 window.SITE = {
-  // Telegram channel — daily trade posts
-  telegram: "https://t.me/adcrim",
+  // Private Telegram invite link
+  telegram: "https://t.me/+1pmbS7P2cg41YjBk",
 
   // Email address used by the contact card and the mailto: link
   email: "divineabbachimdirim1@gmail.com",
