@@ -26,6 +26,19 @@
       });
     }
 
+    if (SITE.x) {
+      document.querySelectorAll("[data-x]").forEach(function (a) {
+        a.href = SITE.x;
+      });
+      // https://x.com/ad_crim1 -> "@ad_crim1"
+      var xh = (SITE.x.split("/").filter(Boolean).pop() || "");
+      if (xh) {
+        document.querySelectorAll("[data-x-text]").forEach(function (el) {
+          el.textContent = "@" + xh;
+        });
+      }
+    }
+
     if (SITE.telegram) {
       document.querySelectorAll("[data-tg]").forEach(function (a) {
         a.href = SITE.telegram;

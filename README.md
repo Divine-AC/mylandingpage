@@ -15,15 +15,16 @@ Built as plain HTML + CSS + JS: **no framework, no build step, no dependencies.*
 | `index.html` | The landing page — all markup and copy |
 | `styles.css` | All styling (one file, one request) |
 | `main.js` | Contact-link wiring, hero ticker, scroll reveal, year |
-| `config.js` | **The only file you edit** — Telegram, email, WhatsApp, LinkedIn |
+| `config.js` | **The only file you edit** — Telegram, email, LinkedIn, X |
 | `assets/divine-hero.jpg` | Portrait, 600×960 |
 | `assets/equity-curve.svg` | Generated equity-curve chart (~5 KB, sharp on retina) |
 | `assets/favicon.svg` | "DA" monogram favicon |
 
 ### Sections (in order)
 
-Hero → Markets (6 instruments) → Method (4 steps) → **Track record (equity curve)** →
-Telegram → **Selected work (4 live apps)** → About → LinkedIn band → Contact.
+Hero → Markets (6 instruments) → Method (4 steps) → **Track record (both accounts)** →
+Telegram → **Selected work (3 live apps)** → **Services (3 disciplines)** → About → LinkedIn band
+→ Contact.
 On mobile there is a hamburger menu and a sticky "Daily trades / Hire me" bar at the bottom.
 
 ### The Selected work section
@@ -33,6 +34,20 @@ fallback panel behind it. If a host ever blocks embedding (`X-Frame-Options` / C
 remains visible and the "Visit live site" link still works — so the section can never look broken.
 Projects: `propfirmintelligenence.vercel.app`, `divine-banking-web-app.vercel.app`,
 `group-6-capstone-project-two.vercel.app`.
+
+### The Services section
+
+Sits at the end of the Work section and states the three disciplines outright, because the page
+leads with trading and a recruiter should not have to dig: **web developer**, **civil engineer**
+(HND, Distinction — Abia State Polytechnic, 2020–2025), and **market analyst**. Each card lists what
+is delivered plus a note on availability, and the block closes with email / LinkedIn / X. It is
+deliberately a services block, not a CV — there is no timeline and no employment history.
+
+### Contact links
+
+Telegram, email, LinkedIn and X are all driven from `config.js` and written into the markup at
+runtime by `main.js` (`data-tg`, `data-email`, `data-linkedin`, `data-x`). To change any of them,
+edit `config.js` only. X is `https://x.com/ad_crim1`.
 | `data/trades-raw.txt` | The broker ledger export, one line per trade |
 | `data/trades.json` | Parsed + verified trades (generated) |
 | `data/stats.json` | Computed statistics (generated) |
@@ -43,7 +58,7 @@ Projects: `propfirmintelligenence.vercel.app`, `divine-banking-web-app.vercel.ap
 | `data/stats-100k.json` | Computed $100k statistics (generated) |
 | `tools/analyse_100k.py` | Parses + verifies the $100k ledger, writes the JSON |
 | `tools/make_chart_100k.py` | Regenerates `assets/equity-100k.svg` from the $100k data |
-| `tools/make_brief_pdf.py` | Regenerates the 14-page brief PDF |
+| `tools/make_brief_pdf.py` | Regenerates the 15-page brief PDF |
 | `docs/Divine-Abba-Landing-Page-Brief.pdf` | **The deliverable brief** — strategy, full copy deck, design system, technical spec, ledger audit, compliance wording, launch checklist, full trade table |
 
 ---
@@ -57,13 +72,14 @@ window.SITE = {
   telegram: "https://t.me/adcrim",
   email: "divineabbachimdirim1@gmail.com",
   linkedin: "https://linkedin.com/in/divine-abba-883540311",
+  x: "https://x.com/ad_crim1",
   ticker: [...]
 }
 ```
 
-WhatsApp has been removed from the page entirely. Change any of the three links above and the
-nav, hero, Telegram band, LinkedIn band, contact cards, sticky mobile bar and footer all update
-at once — the markup never needs editing.
+WhatsApp has been removed from the page entirely. Change any of the four links above and the
+nav, hero, Telegram band, LinkedIn band, services block, contact cards, sticky mobile bar and
+footer all update at once — the markup never needs editing.
 
 **Only remaining task:** if you attach a real domain, replace `mylandingpage-taupe.vercel.app` with it in
 **`index.html`** (canonical, OG, JSON-LD), **`robots.txt`** and **`sitemap.xml`**. On the free

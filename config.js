@@ -14,6 +14,9 @@ window.SITE = {
   // LinkedIn profile — main "follow me" destination
   linkedin: "https://linkedin.com/in/divine-abba-883540311",
 
+  // X (Twitter) profile — set this and every [data-x] link updates
+  x: "https://x.com/ad_crim1",
+
   // Live price strip in the hero. These are STATIC labels, not live quotes —
   // update them by hand or wire up an API in main.js.
   ticker: [
