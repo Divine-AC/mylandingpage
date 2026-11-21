@@ -280,107 +280,6 @@
     });
   }
 
-  /* ---------- illustrative market replay ---------- */
-
-  function initMarketReplay() {
-    var replay = document.querySelector("[data-market-replay]");
-    if (!replay) return;
-    var chart = replay.querySelector("[data-replay-chart]");
-    var playButton = replay.querySelector("[data-replay-play]");
-    var pauseButton = replay.querySelector("[data-replay-pause]");
-    var replayButton = replay.querySelector("[data-replay-again]");
-    var status = replay.querySelector("[data-replay-status]");
-    var replayMarker = chart.querySelector(".market-level-label");
-    var observer = null;
-    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    var hasPlayed = false;
-
-    function setControls(playing, paused) {
-      playButton.disabled = playing && !paused;
-      playButton.querySelector("span").textContent = paused ? "Resume" : "Play replay";
-      pauseButton.disabled = !playing || paused;
-      replayButton.disabled = playing && !paused;
-    }
-
-    function startReplay(restart) {
-      if (reduced) {
-        status.textContent = "Static preview · reduced-motion setting";
-        return;
-      }
-      if (observer) observer.disconnect();
-      if (!restart && replay.classList.contains("is-playing") && replay.classList.contains("is-paused")) {
-        replay.classList.remove("is-paused");
-        status.textContent = "Replay resumed · Illustrative, not live data";
-        setControls(true, false);
-        return;
-      }
-      if (!restart && hasPlayed && replay.classList.contains("is-complete")) {
-        restart = true;
-      }
-      if (restart || !hasPlayed) {
-        replay.classList.remove("is-playing", "is-paused", "is-complete");
-        chart.classList.remove("is-playing", "is-paused", "is-complete");
-        chart.classList.add("replay-ready");
-        void chart.offsetWidth;
-        hasPlayed = true;
-      }
-      replay.classList.add("is-playing");
-      chart.classList.add("is-playing");
-      status.textContent = "Playing illustrative replay · Not live data";
-      setControls(true, false);
-    }
-
-    function pauseReplay() {
-      if (!replay.classList.contains("is-playing") || replay.classList.contains("is-complete")) return;
-      replay.classList.add("is-paused");
-      chart.classList.add("is-paused");
-      status.textContent = "Replay paused";
-      setControls(true, true);
-    }
-
-    function finishReplay() {
-      replay.classList.remove("is-playing", "is-paused");
-      replay.classList.add("is-complete");
-      chart.classList.remove("is-playing", "is-paused");
-      chart.classList.add("is-complete");
-      status.textContent = "Replay complete · Select Replay to watch again";
-      setControls(false, false);
-    }
-
-    playButton.addEventListener("click", function () { startReplay(false); });
-    pauseButton.addEventListener("click", pauseReplay);
-    replayButton.addEventListener("click", function () { startReplay(true); });
-    replayMarker.addEventListener("animationend", function (event) {
-      if (event.animationName !== "label-show") return;
-      if (replay.classList.contains("is-paused")) return;
-      finishReplay();
-    });
-
-    if (reduced) {
-      replay.classList.add("is-complete");
-      status.textContent = "Static preview · reduced-motion setting";
-      playButton.disabled = true;
-      pauseButton.disabled = true;
-      replayButton.disabled = true;
-      return;
-    }
-
-    chart.classList.add("replay-ready");
-    setControls(false, false);
-    if (!("IntersectionObserver" in window)) {
-      startReplay(false);
-      return;
-    }
-    observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting || hasPlayed) return;
-        startReplay(false);
-        observer.disconnect();
-      });
-    }, { threshold: 0.3 });
-    observer.observe(replay);
-  }
-
   /* ---------- current year ---------- */
 
   function initYear() {
@@ -395,7 +294,6 @@
     initActiveLink();
     initReveal();
     initEquityChart();
-    initMarketReplay();
     initYear();
   }
 
