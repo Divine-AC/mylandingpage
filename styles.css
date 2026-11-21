@@ -97,6 +97,10 @@ p{margin:0}
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(216,178,95,.75),inset 0 1px 0 rgba(255,255,255,.5)}
 .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line);color:var(--ink)}
 .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:rgba(216,178,95,.5);transform:translateY(-2px)}
+.btn svg{flex:none}
+.btn-ghost svg{color:var(--gold-dim)}
+.btn-ghost:hover svg{color:var(--gold-hi)}
+.btn-gold svg{opacity:.85}
 .btn-sm{padding:10px 18px;font-size:.86rem}
 .btn-lg{padding:16px 30px;font-size:1rem}
 
@@ -444,10 +448,18 @@ p{margin:0}
   font-size:.78rem !important;color:var(--muted) !important;
 }
 .services-cta{
-  margin-top:22px;font-size:.88rem;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:9px;margin-top:22px;
 }
-.services-cta a{color:var(--gold);border-bottom:1px solid rgba(216,178,95,.3)}
-.services-cta a:hover{border-bottom-color:var(--gold)}
+.services-cta a{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.8rem;font-weight:600;color:var(--ink-2);
+  padding:8px 14px 8px 11px;border-radius:100px;
+  border:1px solid var(--line-soft);background:rgba(255,255,255,.03);
+  transition:color .22s var(--ease),border-color .22s var(--ease),background .22s var(--ease);
+}
+.services-cta a svg{color:var(--gold-dim);flex:none;transition:color .22s var(--ease)}
+.services-cta a:hover{color:var(--gold-hi);border-color:rgba(216,178,95,.42);background:rgba(216,178,95,.07)}
+.services-cta a:hover svg{color:var(--gold-hi)}
 
 @media (max-width:640px){
   .service{padding:18px 16px 16px}
@@ -522,11 +534,19 @@ p{margin:0}
 .contact h2{max-width:none}
 .links{display:grid;gap:10px;margin-top:36px}
 .link-card{
-  display:grid;grid-template-columns:108px 1fr auto;align-items:center;gap:16px;
-  padding:19px 22px;border:1px solid var(--line-soft);border-radius:12px;
+  display:grid;grid-template-columns:auto 96px 1fr auto;align-items:center;gap:14px;
+  padding:15px 20px;border:1px solid var(--line-soft);border-radius:12px;
   background:rgba(255,255,255,.022);min-height:64px;
   transition:border-color .26s var(--ease),background .26s var(--ease),transform .26s var(--ease);
 }
+/* icon chip — same weight as the nav mark, so the row reads as a platform, not a link */
+.lc-ico{
+  width:36px;height:36px;flex:none;display:grid;place-items:center;border-radius:10px;
+  color:var(--gold-hi);background:rgba(216,178,95,.09);
+  border:1px solid rgba(216,178,95,.22);
+  transition:background .26s var(--ease),border-color .26s var(--ease),color .26s var(--ease);
+}
+.link-card:hover .lc-ico{background:rgba(216,178,95,.16);border-color:rgba(216,178,95,.45);color:#f2dca8}
 .link-card:hover{border-color:rgba(216,178,95,.42);background:rgba(216,178,95,.06);transform:translateX(3px)}
 .lc-k{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .lc-v{font-size:.94rem;color:var(--ink);overflow-wrap:anywhere;letter-spacing:-.01em}
@@ -543,7 +563,13 @@ p{margin:0}
 .foot .risk{max-width:56ch;color:#8b8f98;line-height:1.62}
 .foot a{color:var(--ink-2)}
 .foot a:hover{color:var(--gold-hi)}
-.foot-links{display:flex;gap:16px;flex-wrap:wrap}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+.foot-links a{
+  display:inline-flex;align-items:center;gap:6px;
+  transition:color .2s var(--ease);
+}
+.foot-links a svg{opacity:.62;transition:opacity .2s var(--ease),color .2s var(--ease)}
+.foot-links a:hover svg{opacity:1;color:var(--gold-hi)}
 
 /* ---------- sticky mobile CTA ---------- */
 
@@ -625,10 +651,11 @@ p{margin:0}
   .hero-facts{flex-wrap:wrap;gap:16px 0}
   .hero-facts li{padding-right:22px;margin-right:22px}
   .cta-row .btn{width:100%}
-  .link-card{grid-template-columns:1fr auto;gap:4px 12px;padding:16px 18px}
-  .lc-k{grid-column:1}
-  .lc-v{grid-column:1;font-size:.88rem}
-  .lc-a{grid-row:1 / span 2;grid-column:2}
+  .link-card{grid-template-columns:auto 1fr auto;gap:3px 12px;padding:14px 16px}
+  .lc-ico{grid-row:1 / span 2;grid-column:1;width:34px;height:34px}
+  .lc-k{grid-row:1;grid-column:2}
+  .lc-v{grid-row:2;grid-column:2;font-size:.88rem}
+  .lc-a{grid-row:1 / span 2;grid-column:3}
   .foot-in{flex-direction:column}
   .brand-t em{display:none}
   .work-foot{flex-direction:column;align-items:flex-start}
