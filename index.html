@@ -18,7 +18,7 @@
 <meta name="twitter:description" content="Gold, FX, oil and crypto. Daily trade posts on Telegram."/>
 <meta name="theme-color" content="#0b0c0f"/>
 <link rel="icon" href="assets/favicon.svg?v=brand-breakout" type="image/svg+xml"/>
-<link rel="stylesheet" href="styles.css?v=20261121-live-gold-final"/>
+<link rel="stylesheet" href="styles.css?v=20261121-replay"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,45 +87,39 @@
       </div>
     </div>
     <div class="hero-art">
-      <div class="market-visual" role="region" aria-label="Interactive TradingView gold chart">
-        <div class="market-visual-top"><span><i></i> GOLD · XAU/USD</span><small>TRADINGVIEW</small></div>
-        <div class="market-visual-title"><div><strong>Gold</strong><span>XAU/USD</span></div><b>PRICE ACTION · CHOOSE A TIMEFRAME</b></div>
-        <div class="market-chart live-chart">
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget">
-              <div class="chart-loading" role="status">Loading interactive XAU/USD chart…</div>
-            </div>
-            <div class="tradingview-widget-copyright">
-              <a href="https://www.tradingview.com/symbols/OANDA-XAUUSD/" target="_blank" rel="noopener noreferrer">XAU/USD chart</a>
-              <span> by TradingView · data timing depends on the source</span>
-            </div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-            {
-              "autosize": true,
-              "symbol": "OANDA:XAUUSD",
-              "interval": "15",
-              "timezone": "Africa/Lagos",
-              "theme": "dark",
-              "style": "1",
-              "locale": "en",
-              "backgroundColor": "#101114",
-              "gridColor": "rgba(255,255,255,0.06)",
-              "allow_symbol_change": false,
-              "hide_side_toolbar": true,
-              "hide_top_toolbar": false,
-              "hide_legend": true,
-              "hide_volume": true,
-              "calendar": false,
-              "details": false,
-              "hotlist": false,
-              "withdateranges": true,
-              "save_image": false,
-              "support_host": "https://www.tradingview.com"
-            }
-            </script>
+      <div class="market-visual" role="region" aria-label="Illustrative gold candlestick replay">
+        <div class="market-visual-top"><span><i></i> GOLD · XAU/USD</span><small>ILLUSTRATIVE REPLAY</small></div>
+        <div class="market-visual-title"><div><strong>Gold</strong><span>XAU/USD</span></div><b>TRENDLINE BREAK → PULLBACK</b></div>
+        <div class="market-replay" data-market-replay>
+          <div class="market-chart replay-chart" data-replay-chart>
+            <svg viewBox="0 0 480 220" role="img" aria-label="Illustrative gold price replay showing a trendline break and pullback. Not live market data.">
+              <path class="market-gridline" d="M0 35H480M0 80H480M0 125H480M0 170H480M60 0V220M150 0V220M240 0V220M330 0V220M420 0V220"/>
+              <path class="market-trendline" d="M8 94 252 124"/>
+              <path class="market-level" d="M0 118H480"/>
+              <g class="candle up"><path d="M32 142V190"/><rect x="25" y="155" width="14" height="25"/></g>
+              <g class="candle up"><path d="M68 126V170"/><rect x="61" y="136" width="14" height="24"/></g>
+              <g class="candle down"><path d="M104 116V158"/><rect x="97" y="125" width="14" height="22"/></g>
+              <g class="candle down"><path d="M140 128V182"/><rect x="133" y="137" width="14" height="30"/></g>
+              <g class="candle up"><path d="M176 151V198"/><rect x="169" y="162" width="14" height="25"/></g>
+              <g class="candle up"><path d="M212 118V174"/><rect x="205" y="132" width="14" height="28"/></g>
+              <g class="candle up"><path d="M248 96V145"/><rect x="241" y="107" width="14" height="26"/></g>
+              <g class="candle down"><path d="M284 89V139"/><rect x="277" y="101" width="14" height="24"/></g>
+              <g class="candle up"><path d="M320 73V126"/><rect x="313" y="85" width="14" height="30"/></g>
+              <g class="candle up"><path d="M356 51V101"/><rect x="349" y="62" width="14" height="28"/></g>
+              <g class="candle down"><path d="M392 42V94"/><rect x="385" y="55" width="14" height="23"/></g>
+              <g class="candle up"><path d="M428 28V78"/><rect x="421" y="39" width="14" height="27"/></g>
+            </svg>
+            <span class="market-level-label">break · pullback</span>
           </div>
+          <div class="replay-controls">
+            <button class="replay-btn" type="button" data-replay-play>▶ <span>Play replay</span></button>
+            <button class="replay-btn" type="button" data-replay-pause disabled>Ⅱ <span>Pause</span></button>
+            <button class="replay-btn replay-restart" type="button" data-replay-again>↻ <span>Replay</span></button>
+            <span class="replay-status" data-replay-status role="status" aria-live="polite">Illustrative price action · Not live data</span>
+          </div>
+          <div class="replay-progress" aria-hidden="true"><span></span></div>
         </div>
-        <div class="market-visual-foot"><span>Watch structure</span><span>Choose timeframe</span><a href="https://www.tradingview.com/chart/?symbol=OANDA%3AXAUUSD" target="_blank" rel="noopener noreferrer">Open full chart ↗</a></div>
+        <div class="market-visual-foot"><span>Read structure</span><span>Wait for pullback</span><span>Plan the entry</span></div>
       </div>
     </div>
   </div>
@@ -467,6 +461,6 @@
 </div>
 
 <script src="config.js"></script>
-<script src="main.js?v=20261121-live-gold"></script>
+<script src="main.js?v=20261121-replay"></script>
 </body>
 </html>
