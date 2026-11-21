@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 420" width="1000" height="420" role="img" aria-label="Equity curve of 102 closed trades, September to November 2026">
 <defs>
   <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0%" stop-color="#d8b25f" stop-opacity="0.28"/>
-    <stop offset="100%" stop-color="#d8b25f" stop-opacity="0"/>
+    <stop offset="0%" stop-color="#26a69a" stop-opacity="0.12"/>
+    <stop offset="100%" stop-color="#26a69a" stop-opacity="0"/>
   </linearGradient>
   <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0%" stop-color="#8f7a45"/>
@@ -17,8 +17,56 @@
 <rect width="1000" height="420" fill="none"/>
 <line x1="8" y1="322.88" x2="992" y2="322.88" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="992" y="316.88" text-anchor="end" class="ax">10,000</text><line x1="8" y1="191.40" x2="992" y2="191.40" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="992" y="185.40" text-anchor="end" class="ax">15,000</text><line x1="8" y1="59.93" x2="992" y2="59.93" stroke="#ffffff" stroke-opacity="0.07" stroke-width="1"/><text x="992" y="53.93" text-anchor="end" class="ax">20,000</text>
 <path d="M8.00,238.89 L17.65,222.99 L27.29,217.06 L36.94,188.85 L46.59,205.31 L56.24,205.16 L65.88,211.12 L75.53,217.65 L85.18,209.50 L94.82,200.39 L104.47,212.98 L114.12,220.12 L123.76,214.36 L133.41,222.15 L143.06,219.44 L152.71,219.25 L162.35,238.58 L172.00,251.39 L181.65,261.63 L191.29,264.21 L200.94,274.05 L210.59,255.09 L220.24,259.55 L229.88,245.97 L239.53,241.06 L249.18,241.06 L258.82,253.34 L268.47,237.98 L278.12,233.41 L287.76,223.40 L297.41,232.75 L307.06,245.21 L316.71,250.65 L326.35,261.54 L336.00,252.47 L345.65,252.55 L355.29,253.20 L364.94,264.14 L374.59,259.64 L384.24,268.80 L393.88,251.10 L403.53,251.30 L413.18,251.54 L422.82,264.46 L432.47,265.93 L442.12,273.56 L451.76,287.88 L461.41,298.36 L471.06,302.24 L480.71,302.47 L490.35,302.60 L500.00,316.87 L509.65,332.75 L519.29,279.77 L528.94,277.98 L538.59,286.12 L548.24,274.51 L557.88,266.83 L567.53,250.45 L577.18,257.35 L586.82,267.17 L596.47,280.13 L606.12,283.83 L615.76,291.34 L625.41,296.33 L635.06,297.72 L644.71,303.35 L654.35,308.58 L664.00,304.45 L673.65,304.45 L683.29,312.57 L692.94,332.44 L702.59,348.37 L712.24,348.44 L721.88,344.63 L731.53,344.65 L741.18,349.40 L750.82,350.77 L760.47,297.81 L770.12,309.07 L779.76,248.55 L789.41,253.21 L799.06,252.97 L808.71,270.05 L818.35,270.75 L828.00,286.55 L837.65,289.33 L847.29,273.48 L856.94,264.21 L866.59,264.98 L876.24,280.94 L885.88,288.09 L895.53,303.21 L905.18,303.09 L914.82,312.08 L924.47,290.74 L934.12,241.92 L943.76,274.22 L953.41,220.86 L963.06,226.10 L972.71,212.68 L982.35,148.36 L992.00,57.23 L992.00,386 L8.00,386 Z" fill="url(#fill)"/>
-<path d="M8.00,238.89 L17.65,222.99 L27.29,217.06 L36.94,188.85 L46.59,205.31 L56.24,205.16 L65.88,211.12 L75.53,217.65 L85.18,209.50 L94.82,200.39 L104.47,212.98 L114.12,220.12 L123.76,214.36 L133.41,222.15 L143.06,219.44 L152.71,219.25 L162.35,238.58 L172.00,251.39 L181.65,261.63 L191.29,264.21 L200.94,274.05 L210.59,255.09 L220.24,259.55 L229.88,245.97 L239.53,241.06 L249.18,241.06 L258.82,253.34 L268.47,237.98 L278.12,233.41 L287.76,223.40 L297.41,232.75 L307.06,245.21 L316.71,250.65 L326.35,261.54 L336.00,252.47 L345.65,252.55 L355.29,253.20 L364.94,264.14 L374.59,259.64 L384.24,268.80 L393.88,251.10 L403.53,251.30 L413.18,251.54 L422.82,264.46 L432.47,265.93 L442.12,273.56 L451.76,287.88 L461.41,298.36 L471.06,302.24 L480.71,302.47 L490.35,302.60 L500.00,316.87 L509.65,332.75 L519.29,279.77 L528.94,277.98 L538.59,286.12 L548.24,274.51 L557.88,266.83 L567.53,250.45 L577.18,257.35 L586.82,267.17 L596.47,280.13 L606.12,283.83 L615.76,291.34 L625.41,296.33 L635.06,297.72 L644.71,303.35 L654.35,308.58 L664.00,304.45 L673.65,304.45 L683.29,312.57 L692.94,332.44 L702.59,348.37 L712.24,348.44 L721.88,344.63 L731.53,344.65 L741.18,349.40 L750.82,350.77 L760.47,297.81 L770.12,309.07 L779.76,248.55 L789.41,253.21 L799.06,252.97 L808.71,270.05 L818.35,270.75 L828.00,286.55 L837.65,289.33 L847.29,273.48 L856.94,264.21 L866.59,264.98 L876.24,280.94 L885.88,288.09 L895.53,303.21 L905.18,303.09 L914.82,312.08 L924.47,290.74 L934.12,241.92 L943.76,274.22 L953.41,220.86 L963.06,226.10 L972.71,212.68 L982.35,148.36 L992.00,57.23" fill="none" stroke="url(#stroke)" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="992.00" cy="57.23" r="4" fill="#e6c574"/>
+<g fill="none" aria-label="Equity line colored green on rises and red on declines">
+<path d="M8.00,238.89 L17.65,222.99 L27.29,217.06 L36.94,188.85" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M36.94,188.85 L46.59,205.31" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M46.59,205.31 L56.24,205.16" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M56.24,205.16 L65.88,211.12 L75.53,217.65" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M75.53,217.65 L85.18,209.50 L94.82,200.39" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M94.82,200.39 L104.47,212.98 L114.12,220.12" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M114.12,220.12 L123.76,214.36" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M123.76,214.36 L133.41,222.15" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M133.41,222.15 L143.06,219.44 L152.71,219.25" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M152.71,219.25 L162.35,238.58 L172.00,251.39 L181.65,261.63 L191.29,264.21 L200.94,274.05" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M200.94,274.05 L210.59,255.09" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M210.59,255.09 L220.24,259.55" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M220.24,259.55 L229.88,245.97 L239.53,241.06" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M239.53,241.06 L249.18,241.06" stroke="#87909c" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M249.18,241.06 L258.82,253.34" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M258.82,253.34 L268.47,237.98 L278.12,233.41 L287.76,223.40" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M287.76,223.40 L297.41,232.75 L307.06,245.21 L316.71,250.65 L326.35,261.54" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M326.35,261.54 L336.00,252.47" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M336.00,252.47 L345.65,252.55 L355.29,253.20 L364.94,264.14" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M364.94,264.14 L374.59,259.64" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M374.59,259.64 L384.24,268.80" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M384.24,268.80 L393.88,251.10" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M393.88,251.10 L403.53,251.30 L413.18,251.54 L422.82,264.46 L432.47,265.93 L442.12,273.56 L451.76,287.88 L461.41,298.36 L471.06,302.24 L480.71,302.47 L490.35,302.60 L500.00,316.87 L509.65,332.75" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M509.65,332.75 L519.29,279.77 L528.94,277.98" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M528.94,277.98 L538.59,286.12" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M538.59,286.12 L548.24,274.51 L557.88,266.83 L567.53,250.45" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M567.53,250.45 L577.18,257.35 L586.82,267.17 L596.47,280.13 L606.12,283.83 L615.76,291.34 L625.41,296.33 L635.06,297.72 L644.71,303.35 L654.35,308.58" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M654.35,308.58 L664.00,304.45" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M664.00,304.45 L673.65,304.45" stroke="#87909c" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M673.65,304.45 L683.29,312.57 L692.94,332.44 L702.59,348.37 L712.24,348.44" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M712.24,348.44 L721.88,344.63" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M721.88,344.63 L731.53,344.65 L741.18,349.40 L750.82,350.77" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M750.82,350.77 L760.47,297.81" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M760.47,297.81 L770.12,309.07" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M770.12,309.07 L779.76,248.55" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M779.76,248.55 L789.41,253.21" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M789.41,253.21 L799.06,252.97" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M799.06,252.97 L808.71,270.05 L818.35,270.75 L828.00,286.55 L837.65,289.33" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M837.65,289.33 L847.29,273.48 L856.94,264.21" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M856.94,264.21 L866.59,264.98 L876.24,280.94 L885.88,288.09 L895.53,303.21" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M895.53,303.21 L905.18,303.09" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M905.18,303.09 L914.82,312.08" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M914.82,312.08 L924.47,290.74 L934.12,241.92" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M934.12,241.92 L943.76,274.22" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M943.76,274.22 L953.41,220.86" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M953.41,220.86 L963.06,226.10" stroke="#ef5350" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M963.06,226.10 L972.71,212.68 L982.35,148.36 L992.00,57.23" stroke="#26a69a" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/>
+</g>
+<circle cx="992.00" cy="57.23" r="4" fill="#26a69a"/>
 <text x="8" y="410" class="lbl">SEP 2026</text>
 <text x="500" y="410" text-anchor="middle" class="lbl">CLOSED TRADES · 102</text>
 <text x="992" y="410" text-anchor="end" class="lbl">NOV 2026</text>
